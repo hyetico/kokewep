@@ -376,6 +376,7 @@
     height: 45px;
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
 
 .detail_tab li {

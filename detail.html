@@ -278,7 +278,7 @@
       <div class="inner">
         <div class="coffee_product">
           <div class="coffee_product_l">
-            <div class="coffee_product_img">
+            <div class="coffee_product_img tab_thumbnail_img">
               <img src="./img/detail/thumbnail_01.JPG" alt="[콩볶는사람들] 스프링 블렌드">
             </div>
             <div class="coffee_product_smallimg">
@@ -289,10 +289,10 @@
                 <div class="logo_name">콩볶는사람들</div>
               </div>
               <div class="coffee_product_img">
-                <div class="thumbnail">
+                <div class="thumbnail tab_thumbnail">
                   <img src="./img/detail/thumbnail_01.JPG" alt="[콩볶는사람들] 스프링 블렌드">
                 </div>
-                <div class="thumbnail">
+                <div class="thumbnail tab_thumbnail">
                   <img src="./img/detail/thumbnail_02.JPG" alt="[콩볶는사람들] 스프링 블렌드">
                 </div>
               </div>
@@ -328,8 +328,8 @@
                     <li>(주)콩볶는 사람들</li>
                     <li>브라질,콜롬비아,에티오피아</li>
                     <li class="li05">스프링 블렌드(200g,500g,1kg)</li>
-                    <li><a class="on" href="#">200g</a><a href="#">500g</a><a href="#">1kg</a></li>
-                    <li class="li07"><a class="on" href="#">홀빈(분쇄 안함)</a><a href="#">커피 메이커</a><a href="#">에스프레소 머신</a>
+                    <li class="option_coffee"><a class="on" href="#">200g</a><a href="#">500g</a><a href="#">1kg</a></li>
+                    <li class="option_type li07"><a class="on" href="#">홀빈(분쇄 안함)</a><a href="#">커피 메이커</a><a href="#">에스프레소 머신</a>
                       <a href="#">프렌치 프레스</a><a href="#">핸드 드립</a><a href="#">모카포트</a>
                     </li>
                   </ul>
@@ -356,12 +356,12 @@
                     <li>(주)콩볶는 사람들</li>
                     <li>브라질,콜롬비아,에티오피아</li>
                     <li class="li05">스프링 블렌드(200g,500g,1kg)</li>
-                    <li class="libox"><a class="on" href="#">200g</a><a href="#">500g</a><a href="#">1kg</a></li>
-                    <li class="li07 libox"><a class="on" href="#">홀빈(분쇄 안함)</a><a href="#">커피 메이커</a><a href="#">에스프레소
+                    <li class="libox option_coffee"><a class="on" href="#">200g</a><a href="#">500g</a><a href="#">1kg</a></li>
+                    <li class="li07 libox option_type"><a class="on" href="#">홀빈(분쇄 안함)</a><a href="#">커피 메이커</a><a href="#">에스프레소
                         머신</a>
                       <a href="#">프렌치 프레스</a><a href="#">핸드 드립</a><a href="#">모카포트</a>
                     </li>
-                    <li class="li08 libox"><a class="on" href="#">매주</a><a href="#">2주</a><a href="#">3주</a><a
+                    <li class="li08 libox option_date"><a class="on" href="#">매주</a><a href="#">2주</a><a href="#">3주</a><a
                         href="#">4주</a></li>
                   </ul>
                 </div>
@@ -395,10 +395,10 @@
   <div class="product_tabmenu_container inner">
     <section class="product_tabmenu" id="exsheet">
       <ul class="detail_tab">
-        <li class="on"><a href="#exsheet">상품상세정보</a></li>
-        <li><a href="#guidesheet">배송안내</a></li>
-        <li><a href="#reviewsheet">상품후기<span>(13)</span></a></li>
-        <li><a href="#asksheet">상품문의<span>(1)</span></a></li>
+        <li class="on"><a data-target="#exsheet">상품상세정보</a></li>
+        <li><a data-target="#guidesheet">배송안내</a></li>
+        <li><a data-target="#reviewsheet">상품후기<span>(5)</span></a></li>
+        <li><a data-target="#asksheet">상품문의<span>(1)</span></a></li>
       </ul>
       <div class="product_box ex_box">
         <div class="ex_box_hidden">
@@ -443,20 +443,16 @@
             </div>
           </div>
         </div>
-
-
-
-
       </div>
     </section>
 
     <section class="product_tabmenu" id="guidesheet">
-      <a href="#guidesheet"></a>
+      <a data-target="#guidesheet"></a>
       <ul class="detail_tab">
-        <li><a href="#exsheet">상품상세정보</a></li>
-        <li class="on"><a href="#guidesheet">배송안내</a></li>
-        <li><a href="#reviewsheet">상품후기<span>(13)</span></a></li>
-        <li><a href="#asksheet">상품문의<span>(1)</span></a></li>
+        <li><a data-target="#exsheet">상품상세정보</a></li>
+        <li class="on"><a data-target="#guidesheet">배송안내</a></li>
+        <li><a data-target="#reviewsheet">상품후기<span>(5)</span></a></li>
+        <li><a data-target="#asksheet">상품문의<span>(1)</span></a></li>
       </ul>
       <div class="product_box">
         <div class="inner">
@@ -504,12 +500,12 @@
     </section>
 
     <section class="product_tabmenu" id="reviewsheet">
-      <a href="#reviewsheet"></a>
+      <a data-target="#reviewsheet"></a>
       <ul class="detail_tab">
-        <li><a href="#exsheet">상품상세정보</a></li>
-        <li><a href="#guidesheet">배송안내</a></li>
-        <li class="on"><a href="#reviewsheet">상품후기<span>(5)</span></a></li>
-        <li><a href="#asksheet">상품문의<span>(1)</span></a></li>
+        <li><a data-target="#exsheet">상품상세정보</a></li>
+        <li><a data-target="#guidesheet">배송안내</a></li>
+        <li class="on"><a data-target="#reviewsheet">상품후기<span>(5)</span></a></li>
+        <li><a data-target="#asksheet">상품문의<span>(1)</span></a></li>
       </ul>
       <div class="product_box">
         <div class="inner review_inner">
@@ -602,12 +598,12 @@
     </section>
 
     <section class="product_tabmenu" id="asksheet">
-      <a href="#asksheet"></a>
+      <a data-target="#asksheet"></a>
       <ul class="detail_tab">
-        <li><a href="#exsheet">상품상세정보</a></li>
-        <li><a href="#guidesheet">배송안내</a></li>
-        <li><a href="#reviewsheet">상품후기<span>(5)</span></a></li>
-        <li class="on"><a href="#asksheet">상품문의<span>(1)</span></a></li>
+        <li><a data-target="#exsheet">상품상세정보</a></li>
+        <li><a data-target="#guidesheet">배송안내</a></li>
+        <li><a data-target="#reviewsheet">상품후기<span>(5)</span></a></li>
+        <li class="on"><a data-target="#asksheet">상품문의<span>(1)</span></a></li>
       </ul>
       <div class="product_box">
         <div class="inner ask_inner">

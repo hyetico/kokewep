@@ -1,31 +1,6 @@
 
-//로그인팝업
-// const btnClose = document.querySelectorAll('.btn_close')
-// const pupup = document.querySelector('.pupup_outer')
-// const btnHeart = document.querySelectorAll('.xi-heart')
 
-// const btnAdd = document.querySelector('.add')
-// const addPupup = document.querySelector('.detail_pupup_outer')
 
-//       btnHeart.forEach((btnHearts)=>{
-//       btnHearts.addEventListener('click',(e)=>{
-//         e.preventDefault();
-//         pupup.style.display='block'
-//       })
-//   })
-
-//     btnAdd.addEventListener('click',(e)=>{
-//       e.preventDefault();
-//       addPupup.style.display='block'
-//     })
-
-//     btnClose.forEach((btnClose)=>{
-//       btnClose.addEventListener('click',(e)=>{
-//         e.preventDefault();
-//         pupup.style.display='none'
-//         addPupup.style.display='none'
-//     })
-//   })
 
   const priceOption = document.getElementById('price')
 
