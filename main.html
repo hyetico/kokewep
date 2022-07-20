@@ -20,7 +20,7 @@
   <!--  YTPlayer  -->
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/jquery.mb.YTPlayer/3.3.1/css/jquery.mb.YTPlayer.min.css">
-  <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mb.YTPlayer/3.3.1/jquery.mb.YTPlayer.min.js"></script>
 
   <!-- ScrollMagic -->
@@ -54,7 +54,7 @@
   </div>
   <!-- log_pupup_outer -->
 
-  <div class="detail_pupup_outer">
+  <!-- <div class="detail_pupup_outer">
     <div class="detail_pupup_inner">
       <div class="detail_pupup_box">
         <a class="btn_close"><i class="xi-close"></i></a>
@@ -79,8 +79,8 @@
           <div class="coffee_option_outer">
             <div class="coffee_option_box">
               <h4>원두용량</h4>
-              <select class="price_option">
-                <option class="title" value="X">------------<span>&nbsp;&nbsp;옵션
+              <select name="price" id="price">
+                <option class="title" disabled selected>------------<span>&nbsp;&nbsp;옵션
                     (가격)&nbsp;&nbsp;</span>------------
                 </option>
                 <option value="3400">200g</option>
@@ -90,8 +90,8 @@
             </div>
             <div class="coffee_option_box">
               <h4>분쇄선택 <span>(필수)</span></h4>
-              <select>
-                <option>------------&nbsp;&nbsp;추가상품&nbsp;&nbsp;------------</option>
+              <select name="type" id="type">
+                <option disabled selected>------------&nbsp;&nbsp;추가상품&nbsp;&nbsp;------------</option>
                 <option value="">홀빈(분쇄안함)</option>
                 <option value="">커피메이커</option>
                 <option value="">에스프레소머신</option>
@@ -101,7 +101,22 @@
               </select>
             </div>
             <div class="coffee_result_box">
-              <p class="result"></p>
+              <div>
+                <span class="select_name"></span>
+                <p class="select_price"></p>
+                <div class="num_btn">
+                  <button class="in"><i class="xi-angle-up-thin"></i></button>
+                  <h2 id="number">0</h2>
+                  <button class="de"><i class="xi-angle-down-thin"></i></button>
+                  <p class="select_close">
+                    <i class="xi-close"></i>
+                  </p>
+                </div>
+
+              </div>
+              <div>
+                <p class="select_type"></p>
+              </div>
             </div>
           </div>
         </div>
@@ -115,7 +130,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <!-- detail_pupup_outer -->
 
   <div class="top_banner_outer">

@@ -1,54 +1,110 @@
 
 //로그인팝업
-const btnClose = document.querySelectorAll('.btn_close')
-const pupup = document.querySelector('.pupup_outer')
-const btnHeart = document.querySelectorAll('.xi-heart')
+// const btnClose = document.querySelectorAll('.btn_close')
+// const pupup = document.querySelector('.pupup_outer')
+// const btnHeart = document.querySelectorAll('.xi-heart')
 
-const btnAdd = document.querySelector('.add')
-const addPupup = document.querySelector('.detail_pupup_outer')
+// const btnAdd = document.querySelector('.add')
+// const addPupup = document.querySelector('.detail_pupup_outer')
 
-      btnHeart.forEach((btnHearts)=>{
-      btnHearts.addEventListener('click',(e)=>{
-        e.preventDefault();
-        pupup.style.display='block'
-      })
-  })
+//       btnHeart.forEach((btnHearts)=>{
+//       btnHearts.addEventListener('click',(e)=>{
+//         e.preventDefault();
+//         pupup.style.display='block'
+//       })
+//   })
 
-    btnAdd.addEventListener('click',(e)=>{
-      e.preventDefault();
-      addPupup.style.display='block'
-    })
+//     btnAdd.addEventListener('click',(e)=>{
+//       e.preventDefault();
+//       addPupup.style.display='block'
+//     })
 
-    btnClose.forEach((btnClose)=>{
-      btnClose.addEventListener('click',(e)=>{
-        e.preventDefault();
-        pupup.style.display='none'
-        addPupup.style.display='none'
-    })
-  })
+//     btnClose.forEach((btnClose)=>{
+//       btnClose.addEventListener('click',(e)=>{
+//         e.preventDefault();
+//         pupup.style.display='none'
+//         addPupup.style.display='none'
+//     })
+//   })
 
-  const price = document.querySelector(".price_option").options[document.querySelector(".price_option").selectedIndex].value;
-  const options = document.querySelectorAll(".price_option option");
-  const result = document.querySelector(".result");
+  const priceOption = document.getElementById('price')
+
+  // const priceValue = priceOption.options[priceOption.selectedIndex].value;
+
+  let price = document.querySelector(".select_price");
+  let selectCoffee = document.querySelector(".select_name");
+  let numBtn = document.querySelector(".num_btn");
+
+
+
+  // priceOption.addEventListener('change',function(){
+
+  //   // let selectClose = document.querySelector(".select_close");
+  //   // let spanTxt = document.createTextNode('x')
+
+  //   numBtn.style.display='block'
+  //   price.textContent = priceOption.options[priceOption.selectedIndex].value;
+  //   selectCoffee.textContent = priceOption.options[priceOption.selectedIndex].text;
+  // })
+
+  // const typeOption = document.getElementById('type')
+  // let selectType = document.querySelector(".select_type");
+
+  // typeOption.addEventListener('change',function(){
+  //   selectType.textContent = typeOption.options[typeOption.selectedIndex].text;
+  // })
+
+  // const number = document.getElementById('number')
+  // let increaseBtn = document.querySelector(".in");
+  // let decreaseBtn = document.querySelector(".de");
+
+
+  // increaseBtn.addEventListener('click',function(){
+  //   const current = parseInt(number.innerText, 10);
+  //   number.innerText = current + 1;
+  //   price.innerText = priceOption.options[priceOption.selectedIndex].value *1 + price.innerText*1
+  // })
+
+  // decreaseBtn.addEventListener('click',function(){
+  //   const current = parseInt(number.innerText, 10);
+  //   number.innerText = current - 1;
+  //   price.innerText = priceOption.options[priceOption.selectedIndex].value *1 - price.innerText*1
+
+
+  // })
+
+
+  // decrease.onclick = () => {
+  //   const current = parseInt(number.innerText, 10);
+  //   number.innerText = current - 1;
+  // };
+
+
+  // console.log(typeOption)
+
+
+
+
   // var selectValue = options[langSelect.selectedIndex].value;
-  // // select element에서 선택된 option의 text가 저장된다.
+  // select element에서 선택된 option의 text가 저장된다.
   // var selectText = langSelect.options[langSelect.selectedIndex].text;
-  // if ( price!= "X"){
 
-  //   result.innerHTML= option.value}
+  // if (priceOption.){
+
+  //   result.innerHTML= priceValue}
 
 
 
-  var langSelect = document.querySelector(".price_option") 
+  // var langSelect = document.querySelector(".price_option") 
   
 // select element에서 선택된 option의 value가 저장된다.  
-var selectValue = langSelect.options[langSelect.selectedIndex].value;  
+// var selectValue = langSelect.options[langSelect.selectedIndex].value;  
   
 // select element에서 선택된 option의 text가 저장된다.  
-var selectText = langSelect.options[langSelect.selectedIndex].text;  
+// var selectText = langSelect.options[langSelect.selectedIndex].text;  
   
 
-console.log(selectText)
+console.log(priceOption)
 
 
 
@@ -64,6 +120,63 @@ const HeaderMargin = document.querySelector('.header_outer')
   topBanner.style.display='none'
   HeaderMargin.style.marginTop='0'
 })
+
+//픽시드 헤더 
+
+const topHeader = document.querySelector('.top_banner_outer')
+const menuFixed = document.querySelector('.sub_gnb_menu')
+const hideGnb = document.querySelector('.gnb')
+const menuFixedTop= menuFixed.offsetTop 
+const body = document.querySelector('.margin')
+const subMenu = document.querySelector('.main_menu .item .item__contents')
+const logo = document.querySelector('.main_menu .logo_box .logo_ani')
+
+let scrollTop = window.scrollY
+
+window.addEventListener('scroll',(e)=>{
+  e.preventDefault();
+  let scrollTop = window.scrollY
+
+  if(scrollTop >= menuFixedTop){
+    hideGnb.style.display='none'
+    menuFixed.classList.add('border')
+    menuFixed.classList.add('drop')
+    subMenu.classList.add('border01')
+    logo.classList.add('drop03')
+    body.style.marginTop='110px'
+  }
+
+  else {
+    hideGnb.style.display='block'
+    menuFixed.classList.remove('border')
+    menuFixed.classList.remove('drop');
+    subMenu.classList.remove('border01')
+    logo.classList.remove('drop03')
+    body.style.marginTop='0'
+  }
+})
+
+// 햄버튼 메뉴
+const hamBtn = document.querySelector('.main_menu .hambtn')
+const allMenu = document.querySelector('.lnb_sub_outer')
+let isClicks = false;
+
+hamBtn.addEventListener('click',(e)=>{
+  e.preventDefault();
+  if(isClicks==false){
+    allMenu.style.display='block'
+    allMenu.classList.add('dropdown')
+    allMenu.classList.add('border02')
+    isClicks=true;
+  }
+  else{
+    allMenu.style.display='none'
+    allMenu.classList.remove('dropdown')
+    allMenu.classList.remove('border02')
+  isClicks=false;
+  }
+})
+
 
 
 // 탑,바텀 버튼
@@ -153,61 +266,6 @@ searchBtn.addEventListener('click',()=>{
  
 })
 
-
-//픽시드 헤더 
-
-const topHeader = document.querySelector('.top_banner_outer')
-const menuFixed = document.querySelector('.sub_gnb_menu')
-const hideGnb = document.querySelector('.gnb')
-const menuFixedTop= menuFixed.offsetTop 
-const body = document.querySelector('.margin')
-const subMenu = document.querySelector('.main_menu .item .item__contents')
-const logo = document.querySelector('.main_menu .logo_box .logo_ani')
-
-let scrollTop = window.scrollY
-
-window.addEventListener('scroll',(e)=>{
-  e.preventDefault();
-  let scrollTop = window.scrollY
-
-  if(scrollTop >= menuFixedTop){
-    hideGnb.style.display='none'
-    menuFixed.classList.add('border')
-    menuFixed.classList.add('drop')
-    subMenu.classList.add('border01')
-    logo.classList.add('drop03')
-    body.style.marginTop='110px'
-  }
-
-  else {
-    hideGnb.style.display='block'
-    menuFixed.classList.remove('border')
-    menuFixed.classList.remove('drop');
-    subMenu.classList.remove('border01')
-    logo.classList.remove('drop03')
-    body.style.marginTop='0'
-  }
-})
-
-// 햄버튼 메뉴
-const hamBtn = document.querySelector('.main_menu .hambtn')
-const allMenu = document.querySelector('.lnb_sub_outer')
-let isClicks = false;
-
-hamBtn.addEventListener('click',()=>{
-  if(isClicks==false){
-    allMenu.style.display='block'
-    allMenu.classList.add('dropdown')
-    allMenu.classList.add('border02')
-    isClicks=true;
-  }
-  else{
-    allMenu.style.display='none'
-    allMenu.classList.remove('dropdown')
-    allMenu.classList.remove('border02')
-  isClicks=false;
-  }
-})
 
 
 

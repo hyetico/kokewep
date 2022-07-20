@@ -1,3 +1,9 @@
+.num_btn {
+  display: none;
+}
+
+
+
 section {
   margin-bottom: 150px;
 }
@@ -759,6 +765,7 @@ section {
 
 /* collector_banner_outer */
 .collector_banner_outer {
+ 
   width: 100%;
   background-color: #4D422F;
   height: 500px;
@@ -775,7 +782,7 @@ section {
   position: absolute;
   left: 800px;
   top: -300px;
-  width: 3000px;
+  /* width: 3000px; */
   /* transform: rotate(220deg); */
 }
 
