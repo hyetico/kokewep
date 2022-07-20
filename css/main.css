@@ -1,0 +1,1030 @@
+section {
+  margin-bottom: 150px;
+}
+
+
+/* visual_main_outer */
+.visual_main_outer {
+  overflow: hidden;
+  margin-bottom: 60px;
+}
+
+.visual_main_inner {
+  position: relative;
+}
+
+.visual_main_inner>div {
+  opacity: 0;
+}
+
+.visual_main_bg {
+  position: absolute;
+  /* position: relative; */
+  width: 100%;
+  height: 700px;
+  background: url(../img/main/visual_main_bg.jpg)no-repeat center center/cover;
+}
+
+
+.visual_main_item {
+  /* opacity: 0; */
+  position: absolute;
+  left: 0;
+}
+
+.visual_main_item>img {
+  width: 100%;
+}
+
+.visual_main_inner {
+  position: relative;
+}
+
+.visual_main_slide {
+  z-index: 1100;
+  /* position: relative; */
+  height: 700px;
+  /* background-color: #4D422F; */
+}
+
+.visual_main_slide .visual_main_title {
+  text-align: center;
+}
+
+.visual_main_slide .visual_main_title span {
+  display: inline-block;
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+
+.visual_main_slide .vm_swiper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1100;
+  width: 100%;
+  height: 100%;
+}
+
+.visual_main_slide .vm_swiper>.vmslide {
+  height: 100%;
+}
+
+.vmslide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 1000px;
+}
+
+.visual_main_arrow>div {
+  z-index: 1100;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 50px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.visual_main_arrow>.arrow_up {
+  top: 100px;
+}
+
+.visual_main_arrow>.arrow_down {
+  bottom: 100px;
+}
+
+
+/* .best_product_outer  */
+.best_product_outer {}
+
+.best_tab {
+  margin-bottom: 80px;
+}
+
+.best_tab ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.best_tab ul li {}
+
+.best_tab ul li~li {
+  padding-left: 30px;
+}
+
+.best_tab ul li a {
+  display: block;
+  color: #999;
+  font-size: 16px;
+}
+
+.best_tab ul li.tab_on a {
+  font-size: 17px;
+  font-weight: 500;
+  color: #222;
+  border-bottom: 2px solid #222;
+  box-sizing: border-box;
+}
+
+
+.best_tab_conts {
+  height: 500px;
+  position: relative;
+  display: flex;
+  /* margin-bottom: 80px; */
+  /* height: ; */
+}
+
+.best_tab_cont {
+  /* display: none; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* height: 100%; */
+}
+
+.tab_conts>div {
+  display: none;
+}
+
+.tab_conts>div.tab_cont_on {
+  display: block;
+}
+
+.coffee_product_cont {
+  display: flex;
+}
+
+.coffee_product_cont>div {
+  width: 25%;
+}
+
+.coffee_product {
+  position: relative;
+}
+
+.coffee_product_img {
+  position: relative;
+  width: 100%;
+  transition: all 0.36s;
+  cursor: pointer;
+  /* background-color: #ff6c57; */
+}
+
+.coffee_product_img img {
+  width: 100%;
+  transform: scale(0.9);
+  transition: all 0.3s;
+}
+
+.coffee_product_img img:hover {
+  transform: scale(1);
+}
+
+.coffee_product_img .coffee_poduct_icons {
+  z-index: 200;
+  opacity: 0;
+  display: block;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  width: 30px;
+  transition: all 0.33s;
+}
+
+.coffee_product_img .coffee_poduct_icons div:nth-child(2) {
+  margin: 5px 0;
+}
+
+.coffee_product_img .coffee_poduct_icons div i {
+  display: inline-block;
+  font-size: 17px;
+  color: #fff;
+  background-color: #ccc;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.coffee_product_img:hover .coffee_poduct_icons {
+  opacity: 1;
+}
+
+/* .coffee_product_txt  */
+.coffee_product_txt {
+  text-align: center;
+}
+
+.coffee_product_txt .coffee_name {
+  font-size: 17px;
+  margin-bottom: 3px;
+}
+
+.coffee_product_txt .coffee_type {
+  display: block;
+  color: #999;
+  margin-bottom: 5px;
+
+}
+
+.coffee_product_txt .coffee_price {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+
+/* .coffee_logo */
+.coffee_logo {
+  position: absolute;
+  top: 15px;
+  left: 50px;
+}
+
+.coffee_logo_box {
+  overflow: hidden;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  border: 1px solid #f0f0f0;
+  box-sizing: border-box;
+}
+
+.coffee_logo_box_m>img {
+  width: 120%;
+  height: 110%;
+}
+
+
+/* new_product_outer */
+.new_product_outer {}
+
+
+
+.new_product_conts {
+  display: flex;
+  margin-bottom: 80px;
+}
+
+.new_product_cont {
+  display: flex;
+
+}
+
+.new_product_cont>div {
+  width: 25%;
+}
+
+/* .recommend_banner_outer */
+.recommend_banner_outer {
+  overflow: hidden;
+  position: relative;
+  height: 500px;
+  margin-bottom: 100px;
+}
+
+.recommend_bg {
+  overflow: hidden;
+  position: absolute;
+  position: relative;
+  height: 500px;
+  width: 100%;
+  background-color: #faf7e8;
+  /* background: url(../img/main/main_banner.jpg)no-repeat center center/cover; */
+}
+
+.recommend_bg img.l {
+  position: absolute;
+  height: 450px;
+  /* bottom: 30px; */
+  right: -180px;
+  transform: rotate(160deg) scale(1.3);
+}
+
+.recommend_bg img.r {
+  position: absolute;
+  height: 500px;
+  top: 0px;
+  left: -190px;
+  transform: rotateY(180deg) scale(1.4);
+}
+
+.recommend_bg .pro {
+  z-index: 1;
+  /* position: absolute; */
+  height: 200px;
+  bottom: 0;
+  left: 50%;
+  /* transform: translateX(-50%); */
+}
+
+.pro {
+  display: flex;
+  /* height: 100px; */
+  justify-content: center;
+}
+
+.pro img {
+  height: 150px;
+  transition: all 0.3s;
+  transform: scale(0.9);
+}
+
+.pro img:hover {
+  transform: scale(1);
+}
+
+
+.recommend_inner {
+  padding-top: 90px;
+}
+
+.recommend_txt {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.recommend_txt h3 {
+  margin-bottom: 30px;
+}
+
+.recommend_txt p {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.recommend_txt .main_btn02 {
+  display: block;
+  font-size: 15px;
+  width: 220px;
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+  text-align: center;
+  background-color: #ff6c57;
+  border-radius: 40px;
+  transition: all 0.3s;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+
+
+/* .hot_outer */
+.hot_outer {
+  margin-bottom: 30px;
+}
+
+.hot_inner .sub_title {
+  margin-bottom: 90px;
+}
+
+.hot_container {
+  display: flex;
+}
+
+.hot_container .hot_container_l {
+  width: 25%;
+  margin-right: 60px;
+}
+
+.hot_container .hot_container_r {
+  width: 75%;
+}
+
+/* .hot_container .hot_container_l */
+.hot_container .hot_container_l {}
+
+.hot_container .hot_tab {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5px;
+  box-sizing: border-box;
+}
+
+.hot_container .hot_tab li {
+  width: 50%;
+  margin-bottom: 70px;
+  text-align: center;
+}
+
+.hot_container .hot_tab li>.coffee_logo_hot {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.hot_container .hot_tab li>a {
+  display: block;
+}
+
+
+.coffee_logo_hot {
+  position: relative;
+  overflow: hidden;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  margin: 0 auto 10px auto;
+}
+
+.coffee_logo_hot>img {
+  width: 100%;
+  height: 100%;
+}
+
+.hot_logo>.logo_name {
+  color: #999;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+/* .coffee_logo_h a.on {
+  color: #ff6c57;
+} */
+
+.hot_tab li> a.on .logo_name {
+  color: #ff6c57;
+  font-size: 15px;
+}
+
+.hot_tab li> a.on .coffee_logo_hot {
+  border: 1px solid #ff6c57;
+  overflow: hidden;
+  width: 95px;
+  height: 95px;
+  box-sizing: border-box;
+}
+
+.coffee_logo_h.on .coffee_logo_hot>img {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* .hot_container_r */
+.hot_container_r {}
+
+.hot_right_box {
+  position: relative;
+}
+
+.hot_right_swiper {}
+
+
+.hot_container_r {
+  overflow: hidden;
+  position: relative;
+}
+.hot_container_r .hot_conts {
+  position: absolute;
+  left: 0;
+  position: relative;
+}
+
+.hot_container_r .hot_conts>div {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 300px;
+  display: none;
+}
+
+ .hot_container_r .hot_conts>div.hot_conts_on {
+  display: block;
+} 
+
+
+.hot_outer .hot_right_arrow > div {
+  z-index: 1000;
+  position: absolute;
+  top: 25%;
+  transform: translateY(-25%);
+  font-size: 40px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.hot_outer .hot_right_arrow div.arrow_left {
+  left: 15px;
+}
+
+.hot_outer .hot_right_arrow div.arrow_right {
+  right: 15px;
+}
+
+.hot_outer .hot_right_swiper_outer {
+  position: relative;
+}
+
+.hot_right_top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #faf7e8;
+  border-radius: 30px;
+
+}
+
+.hot_right_top>div {
+  margin: 0 40px 0 5px;
+  /* background-color: yellow; */
+}
+
+.hot_right_top>div:nth-child(1) {
+  margin-right: 0;
+}
+
+.hot_right_top .hot_right_top_l {
+  width: 40%;
+  /* background-color: #fff;  */
+}
+
+.hot_right_top .hot_right_top_r {
+  width: 60%;
+  height: 100%;
+  /* background-color: #777; */
+}
+
+.hot_right_top .hot_right_top_r>div {
+  margin-bottom: 25px;
+}
+
+.hot_right_top .hot_right_top_r>div:nth-child(3) {
+  margin: 0;
+}
+
+/* .coffee_product_txt */
+.hot_right_top_r .coffee_product_txt {
+  text-align: left;
+}
+
+.hot_right_top_r .coffee_product_txt>p {
+  font-weight: 500;
+}
+
+/* coffee_product_txt02 */
+.coffee_product_txt02 {
+  font-size: 14px;
+  margin-right: 30px;
+}
+
+/* .coffee_product_txt03 */
+.coffee_product_txt03 .coffee_logo_h {
+  position: absolute;
+  right: 85px;
+  bottom: 30px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.coffee_product_txt03>.coffee_logo_h>.coffee_logo_box {
+  overflow: hidden;
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  border: 1px solid #f0f0f0;
+  box-sizing: border-box;
+  margin-right: 10px;
+}
+
+.coffee_product_txt03>.coffee_logo_h>.coffee_logo_box>img {
+  width: 100%;
+}
+
+.coffee_product_txt03>.coffee_logo_h .coffee_logo_name {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.coffee_product_txt03>.coffee_logo_h .coffee_logo_name span {
+  font-weight: normal;
+  font-size: 13px;
+  color: #999;
+}
+
+/* .hot_outer .hot_right_bottom  */
+.hot_outer .hot_right_bottom {
+  width: 70%;
+  margin-right: 30%;
+}
+
+.coffee_product_hots {
+  display: flex;
+}
+
+.hot_right_bottom>.swiper-slide>div {
+  width: 30%;
+}
+
+.coffee_product_hots>div {
+  width: 10%;
+}
+
+.coffee_product_hots .coffee_product_img {
+ 
+}
+
+.coffee_product_hots .coffee_product_img img {
+  width: 150px;
+  margin: 0 auto;
+}
+.coffee_product_hots .coffee_product_txt .coffee_name {
+  font-size: 13px;
+  margin-bottom: 3px;
+
+}
+
+.coffee_product_hots .coffee_product_txt .coffee_type {
+  font-size: 12px;
+  display: block;
+  color: #999;
+  margin-bottom: 5px;
+}
+
+.coffee_product_hots .coffee_product_txt .coffee_price {
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+
+.coffee_logo02 .coffee_logo_box {
+  border: 1px solid #eeece1;
+  box-sizing: border-box;
+}
+
+
+/* .roastery_outer */
+
+.roastery_outer {}
+
+.roastery_inner {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  border: 1px solid #f0f0f0;
+  box-sizing: border-box;
+  border-radius: 30px;
+  height: 200px;
+}
+
+.roastery_left {
+  width: 25%;
+  height: 100%;
+  padding-right: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.roastery_left h3 {
+  color: #ff6c57;
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+
+.roastery_left p {
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.roastery_right {
+  overflow: hidden;
+  position: relative;
+  width: 75%;
+  padding-left: 50px;
+  box-sizing: border-box;
+}
+
+.roastery_right_inner {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+
+.roastery_outer .swiper-slide {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.roastery_outer .rostery_item {
+  width: 15%;
+  font-size: 12px;
+  text-align: center;
+  color: #222;
+}
+
+.rostery_item .coffee_logo_box {
+  margin: 0 auto 5px auto;
+
+}
+
+.roastery_outer .roastery_arrow div {
+  z-index: 1000;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 28px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.roastery_outer .roastery_arrow div.arrow_left {
+  left: 0;
+}
+
+.roastery_outer .roastery_arrow div.arrow_right {
+  right: 15px;
+}
+
+
+/* collector_banner_outer */
+.collector_banner_outer {
+  width: 100%;
+  background-color: #4D422F;
+  height: 500px;
+}
+
+.collector_bg {
+  position: relative;
+  height: 500px;
+  background: url(../img/main/collector_banner.png) no-repeat center center/cover;
+}
+
+.ci {
+  z-index: -10;
+  position: absolute;
+  left: 800px;
+  top: -300px;
+  width: 3000px;
+  /* transform: rotate(220deg); */
+}
+
+.ci02 {
+  z-index: -10;
+  /* z-index: -9; */
+  position: absolute;
+  left: -200px;
+  top: -120px;
+  width: 30%;
+
+}
+
+.collector_inner {
+  height: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.collector_inner>div {
+  width: 50%;
+}
+
+.collector_txt {}
+
+.collector_txt h3 {
+  text-align: left;
+  font-size: 49px;
+  margin-bottom: 60px;
+  font-weight: 500;
+  color: #ccc;
+  text-transform: none;
+}
+
+.collector_txt p {
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #ccc;
+  margin-bottom: 20px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.collector_youtube {}
+
+
+.collector_youtube #bgndVideo {
+  z-index: -1;
+}
+
+.box {
+  width: 100%;
+}
+
+
+/* .review_outer  */
+.review_outer {
+  margin-bottom: 200px;
+}
+
+.review_inner {
+  position: relative;
+}
+
+.review_inner .sub_title {
+  margin-bottom: 100px;
+}
+
+.review_swiper {
+  margin-bottom: 60px;
+}
+
+.review_conts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.review_conts>div {
+  width: 23%;
+}
+
+.review_conts .review_cont {
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+
+.review_conts .review_img_box {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.review_conts .review_img_box img {
+  width: 100%;
+  height: 100%;
+}
+
+.review_conts .review_img_box .review_label {
+  position: relative;
+  position: absolute;
+  left: 15px;
+  top: 0;
+  border-color: #ff6c57 #ff6c57 transparent #ff6c57;
+  border-style: solid;
+  border-width: 10px 25px 25px 25px;
+  height: 60px;
+  width: 0;
+}
+
+.review_conts .review_img_box .review_label p {
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -50%);
+  font-size: 11px;
+  color: #fff;
+  text-align: center;
+}
+
+.review_conts .review_img_txt {
+  background-color: #faf7e8;
+  padding: 30px 15px;
+  box-sizing: border-box;
+}
+
+.review_conts .review_img_txt .coffee_name {
+  font-size: 16px;
+  margin-bottom: 3px;
+  font-weight: 500;
+}
+
+
+.review_conts .review_img_txt .id_star {
+  display: flex;
+  justify-content: space-between;
+  color: #999;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.review_conts .review_img_txt .review_txt {
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+
+
+.review_arrow {
+  /* position: absolute;
+  bottom: 0; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  color: #ccc;
+}
+
+.review_outer .review_arrow div {
+  z-index: 1000;
+  position: absolute;
+  bottom: -35px;
+  cursor: pointer;
+}
+
+.review_outer .review_arrow div.arrow_left {
+  left: 45%;
+}
+
+.review_outer .review_arrow div.arrow_right {
+  right: 45%;
+}
+
+.review_outer .swiper-pagination {
+  position: absolute;
+  bottom: -30px;
+}
+
+.review_outer .swiper-pagination span {
+  font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+/* origin  */
+.origin {
+  opacity: 0;
+  transition: all 1s;
+}
+
+.origin.position_left {
+  transform: translateX(-120px);
+}
+
+.origin.position_right {
+  transform: translateX(120px);
+}
+
+.origin.position_right02 {
+  transform: rotate(15deg);
+}
+
+.origin.position_top {
+  transform: translateY(120px);
+}
+
+.show .origin {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.show .origin2 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.show .origin.delay_00 {
+  transition-delay: 0s;
+}
+
+.show .origin.delay_01 {
+  transition-delay: 0.25s;
+}
+
+.show .origin.delay_02 {
+  transition-delay: 0.5s;
+}
+
+.show .origin.delay_03 {
+  transition-delay: 0.9s;
+}
+
+.show .origin.delay_04 {
+  transition-delay: 1.2s;
+}
+
+.show .origin.delay_05 {
+  transition-delay: 1.5s;
+}
+
+.show .origin.delay_06 {
+  transition-delay: 1.8s;
+}

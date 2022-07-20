@@ -1,0 +1,2505 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>koke</title>
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/main.css">
+
+  <!-- gsap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js"></script>
+
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+  <!--  YTPlayer  -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/jquery.mb.YTPlayer/3.3.1/css/jquery.mb.YTPlayer.min.css">
+  <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mb.YTPlayer/3.3.1/jquery.mb.YTPlayer.min.js"></script>
+
+  <!-- ScrollMagic -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+
+  <script defer src="./js/common.js"></script>
+  <script defer src="./js/main.js"></script>
+  <script src="./js/js.js"></script>
+</head>
+
+<body>
+
+  <div class="log_pupup_outer pupup_outer">
+    <div class="log_pupup_inner pupup_inner">
+      <div class="log_pupup_box pupup_box">
+        <a class="btn_close"><i class="xi-close"></i></a>
+        <h2 class="pupup_title">로그인</h2>
+        <p>로그인이 필요합니다.<br>
+          로그인 하시겠어요?
+        </p>
+        <div class="btn_cancle_log_box">
+          <a class="btn_cancle_log btn_cancle btn_left">
+            취소
+          </a>
+          <a class="btn_cancle_log btn_log btn_right">
+            로그인
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- log_pupup_outer -->
+
+  <div class="detail_pupup_outer">
+    <div class="detail_pupup_inner">
+      <div class="detail_pupup_box">
+        <a class="btn_close"><i class="xi-close"></i></a>
+        <div class="product_detail_box">
+          <div class="coffee_product_box">
+            <div class="coffee_product_l">
+              <div class="coffee_product_img detail_product_img">
+                <img src="./img/detail/thumbnail_01.JPG" alt="[콩볶는사람들] 스프링 블렌드">
+              </div>
+            </div>
+            <div class="coffee_product_r">
+              <div class="coffee_product_txt detail_product_txt">
+                <p class="coffee_name"><strong>[콩볶는사람들]</strong> 스프링 블렌드</p>
+                <p class="coffee_type">#밀키초코 & 은은한</p>
+                <p class="delivery_charge">
+                  <strong>배송비</strong> 2,500원
+                  <span>조건별배송 지역별추가</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="coffee_option_outer">
+            <div class="coffee_option_box">
+              <h4>원두용량</h4>
+              <select class="price_option">
+                <option class="title" value="X">------------<span>&nbsp;&nbsp;옵션
+                    (가격)&nbsp;&nbsp;</span>------------
+                </option>
+                <option value="3400">200g</option>
+                <option value="4600">500g <span>(+4,600원)</span></option>
+                <option value="11000">1kg <span>(+11,000원)</span></option>
+              </select>
+            </div>
+            <div class="coffee_option_box">
+              <h4>분쇄선택 <span>(필수)</span></h4>
+              <select>
+                <option>------------&nbsp;&nbsp;추가상품&nbsp;&nbsp;------------</option>
+                <option value="">홀빈(분쇄안함)</option>
+                <option value="">커피메이커</option>
+                <option value="">에스프레소머신</option>
+                <option value="">프렌치 프레스</option>
+                <option value="">핸드 드립</option>
+                <option value="">모카포트</option>
+              </select>
+            </div>
+            <div class="coffee_result_box">
+              <p class="result"></p>
+            </div>
+          </div>
+        </div>
+        <div class="btn_cancle_cart_box">
+          <a class="btn_cancle_cart btn_cancle">
+            취소
+          </a>
+          <a class="btn_cancle_cart btn_cart">
+            장바구니
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- detail_pupup_outer -->
+
+  <div class="top_banner_outer">
+    <div class="top_banner_inner inner">
+      <div class="top_banner_txt">
+        <p>구독 시작하면 3,000원 즉시 할인 &middot; 무료교환 &middot; 무료배송</p>
+        <a href="#">내 취향 커피 추천받기<i class="xi-angle-right-min"></i></a>
+        <a class='top_banner_closebtn' href="#"><i class="xi-close"></i></a>
+      </div>
+    </div>
+  </div>
+  <!-- top_banner_outer -->
+
+  <div class="side_quick_banner">
+    <ul>
+      <li class="side_quick_point"><a href="#"><i class="xi-search"></i></a>
+        <div class="quick_point_txt">상품검색</div>
+      </li>
+      <li class="side_quick_point"><a href="#"><i class="xi-eye"></i></a>
+        <div class="quick_point_txt point_txt_basket">최근 본 상품</div>
+      </li>
+      <li class="side_quick_point"><a href="#"><i class="xi-basket"></i></a>
+        <div class="quick_point_txt">장바구니</div>
+      </li>
+      <li class="side_quick_point"><a href="#"><i class="xi-heart"></i></a>
+        <div class="quick_point_txt">관심상품</div>
+      </li>
+      <li class="side_quick_point"><a href="#"><i class="xi-thumbs-up"></i></a>
+        <div class="quick_point_txt">좋아요</div>
+      </li>
+      <li class="side_quick_point"><a href="#"><i class="xi-truck"></i></a>
+        <div class="quick_point_txt">주문내역</div>
+      </li>
+    </ul>
+    <div class="side_top_btn">
+      <div class="top_btn"><a href="#!"><i class="xi-angle-up-min"></i></a></div>
+      <div class="bottom_btn"><a href="#!"><i class="xi-angle-down-min"></i></a></div>
+    </div>
+    <!-- side_top_btn -->
+  </div>
+  <!-- side_quick_banner -->
+
+  <div class="coffee_badge">
+    <div class="coffee_cup_box">
+      <div class="cup">
+        <img src="./img/coffeecup.png" alt="coffeecup">
+        <div class="cup_txt">
+          <p>내 취향 저격 커피는?</p>
+          <div class="cup_txt_hover">
+            <a href="#!">취향 테스트 <span style="font-weight: 700;">GO</span><i class="xi-long-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- coffee_badge -->
+
+  <header class="header_outer">
+    <div class="header_inner">
+      <nav class="gnb inner">
+        <ul>
+          <li><a href="#">회원가입</a></li>
+          <li><a href="#">로그인</a></li>
+          <li class="cart"><a href="#">장바구니 <i class="xi-basket"></i></a>
+            <p class="cart_num_box">
+              <a class="cart_num" href="#">0</a>
+            </p>
+          </li>
+        </ul>
+      </nav>
+      <!-- gnb -->
+      <div class="sub_gnb_menu">
+        <nav class="inner">
+          <ul class="main_menu inner">
+            <li>
+              <div class="hambtn"><a href="#!"><i class="xi-bars"></i></a></div>
+            </li>
+            <li class="item">
+              <div class="item__name">브랜드검색</div>
+              <div class="item__contents">
+                <div class="contents__menu">
+                  <div class="inner">
+                    <div class="brand_search_var">
+                      <input type="text" placeholder="브랜드 검색하기">
+                      <i class="xi-search"></i>
+                    </div>
+                    <div class="category">
+                      <div>
+                        <a class="on" href="#">ALL</a>
+                        <!-- <span>ALL</span> -->
+                      </div>
+                      <div>
+                        <span>ㄱ</span>
+                        &VerticalSeparator;
+                        <span>ㄴ</span>
+                        &VerticalSeparator;
+                        <span>ㄷ</span>
+                        &VerticalSeparator;
+                        <span>ㄹ</span>
+                        &VerticalSeparator;
+                        <span>ㅁ</span>
+                        &VerticalSeparator;
+                        <span>ㅂ</span>
+                        &VerticalSeparator;
+                        <span>ㅅ</span>
+                        &VerticalSeparator;
+                        <span>ㅇ</span>
+                        &VerticalSeparator;
+                        <span>ㅈ</span>
+                        &VerticalSeparator;
+                        <span>ㅊ</span>
+                        &VerticalSeparator;
+                        <span>ㅋ</span>
+                        &VerticalSeparator;
+                        <span>ㅌ</span>
+                        &VerticalSeparator;
+                        <span>ㅍ</span>
+                        &VerticalSeparator;
+                        <span>ㅎ</span>
+                      </div>
+                      <div>
+                        <a href="#">ENG</a>
+                      </div>
+                    </div>
+                    <div class="brands_all">
+                      <ul>
+                        <li><a href="#">리플로우커피</a></li>
+                        <li><a href="#">슬러핀커피</a></li>
+                        <li><a href="#">프로토콜 커피</a></li>
+                      </ul>
+                      <ul>
+                        <li><a href="#">컬리드 빈</a></li>
+                        <li><a href="#">오드이븐</a></li>
+                        <li><a href="#">콩볶는사람들</a></li>
+                      </ul>
+                      <ul>
+                        <li><a href="#">커피몽타주</a></li>
+                        <li><a href="#">영앤도터스</a></li>
+                        <li><a href="#">하늘에커피</a></li>
+                      </ul>
+                      <ul>
+                        <li><a href="#">디벨로핑룸</a></li>
+                        <li><a href="#">디카프워크룸</a></li>
+                        <li><a href="#">리플렉트커피</a></li>
+                      </ul>
+                      <ul>
+                        <li><a href="#">토치커피</a></li>
+                        <li><a href="#">카페플롬</a></li>
+                        <li><a href="#">하우트커피컴퍼니</a></li>
+                      </ul>
+                      <ul>
+                        <li><a href="#">커넥츠커피</a></li>
+                        <li><a href="#">차군커피</a></li>
+                        <li><a href="#">알렉스더커피</a></li>
+                      </ul>
+                      <ul>
+                        <li><a href="#">수수커피</a></li>
+                        <li><a href="#">웨이브온커피</a></li>
+                        <li><a href="#">55도 커피</a></li>
+                      </ul>
+                      <ul>
+                        <li><a href="#">FELT</a></li>
+                        <li><a href="#">식물학 커피</a></li>
+                        <li><a href="#">베르크</a></li>
+                      </ul>
+
+                      <ul>
+                        <li><a href="#">한국커피</a></li>
+                        <li><a href="#">리버벨</a></li>
+                        <li><a href="#">디카 커피랩</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li><a href="./sub.html">모든커피</a></li>
+            <li><a href="#">내 커피 취향테스트</a></li>
+            <li class="logo">
+              <a class="logo_box" href="./main.html">
+                <div class="logo_ani">
+                  <img src="./img/logo.png" alt="코케로고이미지">
+                </div>
+              </a>
+              <a class="logo_bg" href="#"></a>
+            </li>
+            <li><a href="#">싱글오리진</a></li>
+            <li><a href="#">블랜드</a></li>
+            <li class="member_li"><a href="#">구독하기</a>
+              <div class="member_txt">
+                <a href="#">무료배송</a>
+              </div>
+            </li>
+            <li></li>
+            <li class="search">
+              <div class="search_box_outer">
+                <div class="search_box">
+                  <div class="search_box_var"><input type="text" class="searchvar" placeholder=""></div>
+                  <div class="search_btn"><i class="xi-search"></i></div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- sub_gnb_menu -->
+    <div class="lnb_sub_outer">
+      <div class="lnb_inner inner">
+        <nav class="lnb_sub">
+          <ul>
+            <li><a href="#">전체메뉴</a></li>
+            <li><a href="./sub.html">모든커피</a>
+              <ul>
+                <li><a href="#">브랜드</a></li>
+                <li><a href="#">싱글오리진</a></li>
+                <li><a href="#">블랜드</a></li>
+              </ul>
+            </li>
+            <li><a href="#">내입맛커피</a>
+              <ul>
+                <li><a href="#">내커피취향테스트</a></li>
+                <li><a href="#">구독하기</a></li>
+                <li><a href="#">구독후기</a></li>
+              </ul>
+            </li>
+            <li><a href="#">커뮤니터</a>
+              <ul>
+                <li><a href="#">EVENT /NEWS</a></li>
+                <li><a href="#">REVIEW</a></li>
+              </ul>
+            </li>
+            <li><a href="#">고객센터</a>
+              <ul>
+                <li><a href="#">NOTICE</a></li>
+                <li><a href="#">Q&A</a></li>
+                <li><a href="#">1:1문의</a></li>
+              </ul>
+            </li>
+            <li><a href="#">ABOUT AS</a>
+              <ul>
+                <li><a href="#">BRAND</a></li>
+                <li><a href="#">입점 문의</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- lnb_sub_outer -->
+  </header>
+  <!-- header_outer -->
+
+  <section class="visual_main_outer margin scroll_el">
+    <div class="visual_main_inner">
+      <div class="visual_main_bg"></div>
+      <div class="visual_main_item vm origin position_top"><img src="./img/main/visual_main_items.png" alt="메인커피아이템이미지">
+      </div>
+      <div class="visual_main_inner inner vm">
+        <div class="visual_main_slide swiper">
+          <div class="vm_swiper swiper-wrapper">
+            <div class="vmslide swiper-slide">
+              <h2 class="visual_main_title">이번커피도, 다음커피도<br>
+                내가 좋아하는 맛으로 즐겨요.<br>
+                <span>다양한 커피 중에서 내 취향 커피만 구독해요.실패할 걱정 없어요.</span>
+              </h2>
+              <a class="main_btn" href="#!">내 취향 커피 추천받기 <i class="xi-arrow-right"></i></a>
+            </div>
+            <div class="vmslide swiper-slide">
+              <h2 class="visual_main_title">코케를 구독 중인<br>
+                다양한 커피 취향의 커피인들<br>
+                <span>데일리 커피에서 디카페인까지.
+                  다양한 취향을 가진 사람들이 구독중인 코케</span>
+              </h2>
+              <a class="main_btn" href="#!">구독리뷰 보러가기 <i class="xi-arrow-right"></i></a>
+            </div>
+            <div class="vmslide swiper-slide">
+              <h2 class="visual_main_title">한 번쯤 마셔보고 싶었던<br>
+                커피 맛집 로스터리 모든 원두<br>
+                <span>커피 맛있다고 소문난 로스터리의 원두가 다 있어요.</span>
+              </h2>
+              <a class="main_btn" href="#!">로스터리 보러가기 <i class="xi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="visual_main_arrow">
+          <div class="arrow_up"><i class="xi-angle-up-thin"></i></div>
+          <div class="arrow_down"><i class="xi-angle-down-thin"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- visual_main_outer -->
+  <section class="best_product_outer scroll_el">
+    <div class="best_product_inner inner">
+      <h2 class="eng ">best</h2>
+      <p class="sub_title">잘 나가는 원두, 여기 다 모았어요.</p>
+      <div class="origin position_top  delay_01">
+        <div class="best_tab">
+          <ul class="tab">
+            <li class="tab_on"><a href="#best01">BEST</a></li>
+            <li><a href="#best02">달콤 & 쌉쌀</a></li>
+            <li><a href="#best03">고소 & 묵직한</a></li>
+            <li><a href="#best04">화사한 & 풍부한</a></li>
+            <li><a href="#best05">밸런스 & 부드러운</a></li>
+            <li><a href="#best06">은은 & 꽃향기</a></li>
+          </ul>
+        </div>
+        <!-- best_tab -->
+        <div class="best_tab_conts tab_conts">
+          <div id="best01" class="best_tab_cont best_tab_cont01 tab_cont_on">
+            <div class="coffee_product_cont">
+              <div class="coffee_product coffee_product01">
+                <a href="./detail.html">
+                  <div class="coffee_product_img">
+                    <img src="./img/main/best_img_01.jpg" alt="[콩볶는사람들] 스프링 블렌드">
+                    <div class="coffee_poduct_icons">
+                      <div class="add"><i class="xi-file-add"></i></div>
+                      <div class="heart_icon"><i class="xi-heart"></i></div>
+                      <div><i class="xi-cart-add"></i></div>
+                    </div>
+                  </div>
+                  <div class="coffee_product_txt">
+                    <p class="coffee_name">[콩볶는사람들] 스프링 블렌드</p>
+                    <span class="coffee_type">#밀키&은은한</span>
+                    <p class="coffee_price">12,000원</p>
+                  </div>
+                  <div class="coffee_logo">
+                    <div class="coffee_logo_box">
+                      <img src="./img/main/logo_img_01.jpg" alt="콩볶는사람들로고">
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="coffee_product coffee_product02">
+                <div class="coffee_product_img">
+                  <img src="./img/main/best_img_02.png" alt="[하늘에커피] 하늘에 시그니처 블랜딩">
+                  <div class="coffee_poduct_icons">
+                    <div><i class="xi-file-add"></i></div>
+                    <div class="heart_icon"><i class="xi-heart"></i></div>
+                    <div><i class="xi-cart-add"></i></div>
+                  </div>
+                </div>
+                <div class="coffee_product_txt">
+                  <p class="coffee_name">[하늘에커피] 하늘에 시그니처 블랜딩</p>
+                  <span class="coffee_type">#상큼 & 깔끔한</span>
+                  <p class="coffee_price">11,500원</p>
+                </div>
+
+                <div class="coffee_logo">
+                  <div class="coffee_logo_box">
+                    <img src="./img/main/logo_img_02.png" alt="하늘에커피 로고">
+                  </div>
+                </div>
+              </div>
+              <div class="coffee_product coffee_product03">
+                <div class="coffee_product_img">
+                  <img src="./img/main/best_img_03.jpg" alt="[영앤도터스] 룰라바이">
+                  <div class="coffee_poduct_icons">
+                    <div><i class="xi-file-add"></i></div>
+                    <div><i class="xi-heart"></i></div>
+                    <div><i class="xi-cart-add"></i></div>
+                  </div>
+                </div>
+                <div class="coffee_product_txt">
+                  <p class="coffee_name">[영앤도터스] 룰라바이</p>
+                  <span class="coffee_type">#달콤 & 상큼</span>
+                  <p class="coffee_price">18,000원</p>
+                </div>
+
+                <div class="coffee_logo">
+                  <div class="coffee_logo_box">
+                    <img src="./img/main/logo_img_03.png" alt="영앤도터스 로고">
+                  </div>
+                </div>
+              </div>
+              <div class="coffee_product coffee_product04">
+                <div class="coffee_product_img">
+                  <img src="./img/main/best_img_04.jpg" alt="[커피몽타주] 비터스윗 라이트 에디션 1">
+                  <div class="coffee_poduct_icons">
+                    <div><i class="xi-file-add"></i></div>
+                    <div><i class="xi-heart"></i></div>
+                    <div><i class="xi-cart-add"></i></div>
+                  </div>
+                </div>
+                <div class="coffee_product_txt">
+                  <p class="coffee_name">[커피몽타주] 비터스윗 라이트 에디션 1</p>
+                  <span class="coffee_type">#밸런스 & 부드러운</span>
+                  <p class="coffee_price">12,000원</p>
+                </div>
+                <div class="coffee_logo">
+                  <div class="coffee_logo_box coffee_logo_box_m">
+                    <img src="./img/main/logo_img_04.png" alt="커피몽타주로고">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="best02" class="best_tab_cont best_tab_cont02 ">
+            <div class="coffee_product_cont">
+              <div class="coffee_product coffee_product01">
+                <div class="coffee_product_img">
+                  <img src="./img/main/tab_02/70f288881c294426af466876ba263216.jpg" alt="[리플렉트]콜롬비아 디카페인 에스프레소">
+                  <div class="coffee_poduct_icons">
+                    <div><i class="xi-file-add"></i></div>
+                    <div><i class="xi-heart"></i></div>
+                    <div><i class="xi-cart-add"></i></div>
+                  </div>
+                </div>
+                <div class="coffee_product_txt">
+                  <p class="coffee_name">[리플렉트] 콜롬비아 디카페인 에스프레소</p>
+                  <span class="coffee_type">#달콤 & 묵직한</span>
+                  <p class="coffee_price">14,000원</p>
+                </div>
+                <div class="coffee_logo">
+                  <div class="coffee_logo_box">
+                    <img src="./img/main/tab_02/c7502c2c62514754a085a1170e2f06bf.png" alt="리플렉트로고">
+                  </div>
+                </div>
+              </div>
+              <div class="coffee_product coffee_product02">
+                <div class="coffee_product_img">
+                  <img src="./img/main/tab_02/472dea3776a249e5a6f681254e8e551e.jpg" alt="[앰비언스] 헬로 다크니스">
+                  <div class="coffee_poduct_icons">
+                    <div><i class="xi-file-add"></i></div>
+                    <div><i class="xi-heart"></i></div>
+                    <div><i class="xi-cart-add"></i></div>
+                  </div>
+                </div>
+                <div class="coffee_product_txt">
+                  <p class="coffee_name">[앰비언스] 헬로 다크니스</p>
+                  <span class="coffee_type">#달콤 & 쌉쌀</span>
+                  <p class="coffee_price">12,000원</p>
+                </div>
+
+                <div class="coffee_logo">
+                  <div class="coffee_logo_box">
+                    <img src="./img/main/tab_02/ee270b87b5144602b10051be75046d48.jpg" alt="앰비언스 로고">
+                  </div>
+                </div>
+              </div>
+              <div class="coffee_product coffee_product03">
+                <div class="coffee_product_img">
+                  <img src="./img/main/tab_02/e1c3aabb3722407fb3e3fa703fbce898.jpg" alt="[프레이저] 인디언 헤드">
+                  <div class="coffee_poduct_icons">
+                    <div><i class="xi-file-add"></i></div>
+                    <div><i class="xi-heart"></i></div>
+                    <div><i class="xi-cart-add"></i></div>
+                  </div>
+                </div>
+                <div class="coffee_product_txt">
+                  <p class="coffee_name">[프레이저커피] 인디언 헤드</p>
+                  <span class="coffee_type">#쌉쌀 & 묵직한</span>
+                  <p class="coffee_price">18,000원</p>
+                </div>
+
+                <div class="coffee_logo">
+                  <div class="coffee_logo_box">
+                    <img src="./img/main/tab_02/logo_img_05.png" alt="프레이저커피 로고">
+                  </div>
+                </div>
+              </div>
+              <div class="coffee_product coffee_product04">
+                <div class="coffee_product_img">
+                  <img src="./img/main/tab_02/cc00cef1ef34480aaad6a61b546d70ab.jpg" alt="[하우트] 썸즈업 블렌드">
+                  <div class="coffee_poduct_icons">
+                    <div><i class="xi-file-add"></i></div>
+                    <div><i class="xi-heart"></i></div>
+                    <div><i class="xi-cart-add"></i></div>
+                  </div>
+                </div>
+                <div class="coffee_product_txt">
+                  <p class="coffee_name">[하우트] 썸즈업 블렌드</p>
+                  <span class="coffee_type">#고소 & 쌉쌀</span>
+                  <p class="coffee_price">7,000원</p>
+                </div>
+                <div class="coffee_logo">
+                  <div class="coffee_logo_box">
+                    <img src="./img/main/tab_02/7551f51debdc48e199fade6a2ef4c8a1.png" alt="하우트로고">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="best03" class="best_tab_cont best_tab_cont03">
+            <div class="coffee_product_cont">
+              <div class="coffee_product coffee_product01">
+                <div class="coffee_product_img">
+                  <img src="./img/main/tab_03/3336b81dedfb4b618d6aba2ab12d6d31.png" alt="[식물학 커피] 마리모">
+                  <div class="coffee_poduct_icons">
+                    <div><i class="xi-file-add"></i></div>
+                    <div><i class="xi-heart"></i></div>
+                    <div><i class="xi-cart-add"></i></div>
+                  </div>
+                </div>
+                <div class="coffee_product_txt">
+                  <p class="coffee_name">[식물학 커피] 마리모</p>
+                  <span class="coffee_type">#고소 & 묵직한</span>
+                  <p class="coffee_price">13,000원</p>
+                </div>
+                <div class="coffee_logo">
+                  <div class="coffee_logo_box">
+                    <img src="./img/main/tab_03/9dcd93c2634e4bbca5c93256a91387b3.png" alt="식물학 커피">
+                  </div>
+                </div>
+              </div>
+              <div class="coffee_product coffee_product02">
+                <div class="coffee_product_img">
+                  <img src="./img/main/tab_03/ee4fe5d6f74444f981792b22fbeaa350.png" alt="[센터커피] 에티오피아 예가체프">
+                  <div class="coffee_poduct_icons">
+                    <div><i class="xi-file-add"></i></div>
+                    <div><i class="xi-heart"></i></div>
+                    <div><i class="xi-cart-add"></i></div>
+                  </div>
+                </div>
+                <div class="coffee_product_txt">
+                  <p class="coffee_name">[센터커피] 에티오피아 예가체프</p>
+                  <span class="coffee_type">#고소 & 묵직한</span>
+                  <p class="coffee_price">13,000원</p>
+                </div>
+
+                <div class="coffee_logo">
+                  <div class="coffee_logo_box">
+                    <img src="./img/main/tab_03/67b5183f238343308cae903a17226715.png" alt="센터커피">
+                  </div>
+                </div>
+              </div>
+              <div class="coffee_product coffee_product03">
+                <div class="coffee_product_img">
+                  <img src="./img/main/tab_03/8264a22664284a0c8e52753f59e3bab1.png" alt="[인더매스] #55-scale">
+                  <div class="coffee_poduct_icons">
+                    <div><i class="xi-file-add"></i></div>
+                    <div><i class="xi-heart"></i></div>
+                    <div><i class="xi-cart-add"></i></div>
+                  </div>
+                </div>
+                <div class="coffee_product_txt">
+                  <p class="coffee_name">[인더매스] #55-scale</p>
+                  <span class="coffee_type">#쌉쌀 & 묵직한</span>
+                  <p class="coffee_price">13,500원</p>
+                </div>
+
+                <div class="coffee_logo">
+                  <div class="coffee_logo_box">
+                    <img src="./img/main/tab_03/beefbd95d7a8443d86586c0e4d8b66f6.png" alt="인더매스로고">
+                  </div>
+                </div>
+              </div>
+              <div class="coffee_product coffee_product04">
+                <div class="coffee_product_img">
+                  <img src="./img/main/tab_03/c0bfe3d4f0bd440c8409ad18f6da7f8c.png" alt="[커넥츠커피] 뉴커먼">
+                  <div class="coffee_poduct_icons">
+                    <div><i class="xi-file-add"></i></div>
+                    <div><i class="xi-heart"></i></div>
+                    <div><i class="xi-cart-add"></i></div>
+                  </div>
+                </div>
+                <div class="coffee_product_txt">
+                  <p class="coffee_name">[커넥츠커피] 뉴커먼</p>
+                  <span class="coffee_type">#고소 & 묵직한</span>
+                  <p class="coffee_price">12,000원</p>
+                </div>
+                <div class="coffee_logo">
+                  <div class="coffee_logo_box">
+                    <img src="./img/main/tab_03/aaaa250b45c04a098324e8b016790369.png" alt="커넥츠커피로고">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="best04" class="best_tab_cont best_tab_cont04">
+            <div class="coffee_product_cont">
+              <div class="coffee_product coffee_product01">
+                <div class="coffee_product_img">
+                  <img src="./img/main/tab_04/3c0438561e8546aebddb8492ba59960d.jpg" alt="[앰비언스] 아이리스">
+                  <div class="coffee_poduct_icons">
+                    <div><i class="xi-file-add"></i></div>
+                    <div><i class="xi-heart"></i></div>
+                    <div><i class="xi-cart-add"></i></div>
+                  </div>
+                </div>
+                <div class="coffee_product_txt">
+                  <p class="coffee_name">[앰비언스] 아이리스</p>
+                  <span class="coffee_type">#화사한 & 과일</span>
+                  <p class="coffee_price">14,000원</p>
+                </div>
+                <div class="coffee_logo">
+                  <div class="coffee_logo_box">
+                    <img src="./img/main/tab_02/ee270b87b5144602b10051be75046d48.jpg" alt="앰비언스 로고">
+                  </div>
+                </div>
+              </div>
+              <div class="coffee_product coffee_product02">
+                <div class="coffee_product_img">
+                  <img src="./img/main/tab_04/3993e6f53a0346589d5c52156a5c200d.jpg" alt="[앰비언스] 파나마 잰슨 게이샤 워시드">
+                  <div class="coffee_poduct_icons">
+                    <div><i class="xi-file-add"></i></div>
+                    <div><i class="xi-heart"></i></div>
+                    <div><i class="xi-cart-add"></i></div>
+                  </div>
+                </div>
+                <div class="coffee_product_txt">
+                  <p class="coffee_name">[앰비언스] 파나마 잰슨 게이샤 워시드</p>
+                  <span class="coffee_type">#꽃향기 & 화사한</span>
+                  <p class="coffee_price">35,000원</p>
+                </div>
+
+                <div class="coffee_logo">
+                  <div class="coffee_logo_box">
+                    <img src="./img/main/tab_02/ee270b87b5144602b10051be75046d48.jpg" alt="앰비언스 로고">
+                  </div>
+                </div>
+              </div>
+              <div class="coffee_product coffee_product03">
+                <div class="coffee_product_img">
+                  <img src="./img/main/tab_04/a53a0eeaed0e405c97bb0f58c35653c5.jpg" alt="[한국커피] 에티오피아 반코 고고티">
+                  <div class="coffee_poduct_icons">
+                    <div><i class="xi-file-add"></i></div>
+                    <div><i class="xi-heart"></i></div>
+                    <div><i class="xi-cart-add"></i></div>
+                  </div>
+                </div>
+                <div class="coffee_product_txt">
+                  <p class="coffee_name">[한국커피] 에티오피아 반코 고고티</p>
+                  <span class="coffee_type">#과일 & 화사한</span>
+                  <p class="coffee_price">16,000원</p>
+                </div>
+
+                <div class="coffee_logo">
+                  <div class="coffee_logo_box">
+                    <img src="./img/main/tab_04/523030e2eedf422c87d70319f493b36d.jpg" alt="한국커피로고">
+                  </div>
+                </div>
+              </div>
+              <div class="coffee_product coffee_product04">
+                <div class="coffee_product_img">
+                  <img src="./img/main/tab_04/e1f99f02be824ee294a988bd3761dfb1.jpg" alt="[브니엘 커피] 마이로맨스">
+                  <div class="coffee_poduct_icons">
+                    <div><i class="xi-file-add"></i></div>
+                    <div><i class="xi-heart"></i></div>
+                    <div><i class="xi-cart-add"></i></div>
+                  </div>
+                </div>
+                <div class="coffee_product_txt">
+                  <p class="coffee_name">[브니엘 커피] 마이로맨스</p>
+                  <span class="coffee_type">#화사한 & 꽃향기</span>
+                  <p class="coffee_price">12,000원</p>
+                </div>
+                <div class="coffee_logo">
+                  <div class="coffee_logo_box">
+                    <img src="./img/main/tab_04/4e13897065f74741955c8142b2f92a92.jpg" alt="브니엘 커피">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="best05" class="best_tab_cont best_tab_cont05">
+            <div class=" coffee_product_cont">
+              <div class="coffee_product coffee_product01">
+                <div class="coffee_product_img">
+                  <img src="./img/main/tab_05/219afed18f044ddd8a9239d8b7dfbbe1.jpg" alt="[리플렉트]클래식 에스프레소">
+                  <div class="coffee_poduct_icons">
+                    <div><i class="xi-file-add"></i></div>
+                    <div><i class="xi-heart"></i></div>
+                    <div><i class="xi-cart-add"></i></div>
+                  </div>
+                </div>
+                <div class="coffee_product_txt">
+                  <p class="coffee_name">[리플렉트] 클래식 에스프레소</p>
+                  <span class="coffee_type">#밸런스 & 부드러운</span>
+                  <p class="coffee_price">13,000원</p>
+                </div>
+                <div class="coffee_logo">
+                  <div class="coffee_logo_box">
+                    <img src="./img/main/tab_02/c7502c2c62514754a085a1170e2f06bf.png" alt="리플렉트로고">
+                  </div>
+                </div>
+              </div>
+              <div class="coffee_product coffee_product02">
+                <div class="coffee_product_img">
+                  <img src="./img/main/tab_05/coffee_img_11.png" alt="[하늘에커피] 콜롬비아 디카페인">
+                  <div class="coffee_poduct_icons">
+                    <div><i class="xi-file-add"></i></div>
+                    <div><i class="xi-heart"></i></div>
+                    <div><i class="xi-cart-add"></i></div>
+                  </div>
+                </div>
+                <div class="coffee_product_txt">
+                  <p class="coffee_name">[하늘에커피] 콜롬비아 디카페인</p>
+                  <span class="coffee_type">#밸런스 & 견과류</span>
+                  <p class="coffee_price">11,000원</p>
+                </div>
+
+                <div class="coffee_logo">
+                  <div class="coffee_logo_box">
+                    <img src="./img/main/logo_img_02.png" alt="하늘에커피 로고">
+                  </div>
+                </div>
+              </div>
+              <div class="coffee_product coffee_product03">
+                <div class="coffee_product_img">
+                  <img src="./img/main/tab_05/coffee_img_04.jpg" alt="[커피몽타주] 비터스윗 라이트 에디션 1">
+                  <div class="coffee_poduct_icons">
+                    <div><i class="xi-file-add"></i></div>
+                    <div><i class="xi-heart"></i></div>
+                    <div><i class="xi-cart-add"></i></div>
+                  </div>
+                </div>
+                <div class="coffee_product_txt">
+                  <p class="coffee_name">[커피몽타주] 비터스윗 라이트 에디션 1</p>
+                  <span class="coffee_type">#밸런스 & 부드러운</span>
+                  <p class="coffee_price">12,000원</p>
+                </div>
+                <div class="coffee_logo">
+                  <div class="coffee_logo_box coffee_logo_box_m">
+                    <img src="./img/main/logo_img_04.png" alt="커피몽타주로고">
+                  </div>
+                </div>
+              </div>
+              <div class="coffee_product coffee_product04">
+                <div class="coffee_product_img">
+                  <img src="./img/main/tab_05/c7e54fd0150046c99e157e27bc54c2f3.jpg" alt="[프레이저] 엘리 크릭">
+                  <div class="coffee_poduct_icons">
+                    <div><i class="xi-file-add"></i></div>
+                    <div><i class="xi-heart"></i></div>
+                    <div><i class="xi-cart-add"></i></div>
+                  </div>
+                </div>
+                <div class="coffee_product_txt">
+                  <p class="coffee_name">[프레이저커피] 엘리 크릭</p>
+                  <span class="coffee_type">#밸런스 & 부드러운</span>
+                  <p class="coffee_price">15,000원</p>
+                </div>
+
+                <div class="coffee_logo">
+                  <div class="coffee_logo_box">
+                    <img src="./img/main/tab_02/logo_img_05.png" alt="프레이저커피 로고">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="best06" class="best_tab_cont best_tab_cont06">
+            <div class="coffee_product_cont">
+              <div class="coffee_product coffee_product01">
+                <div class="coffee_product_img">
+                  <img src="./img/main/tab_06/a76f0b22321f4c409af6446fd17e4ba9.jpg" alt="[리버벨] 코스타리카 SHB EP">
+                  <div class="coffee_poduct_icons">
+                    <div><i class="xi-file-add"></i></div>
+                    <div><i class="xi-heart"></i></div>
+                    <div><i class="xi-cart-add"></i></div>
+                  </div>
+                </div>
+                <div class="coffee_product_txt">
+                  <p class="coffee_name">[리버벨] 코스타리카 SHB EP</p>
+                  <span class="coffee_type">#과일 & 은은한</span>
+                  <p class="coffee_price">16,000원</p>
+                </div>
+                <div class="coffee_logo">
+                  <div class="coffee_logo_box">
+                    <img src="./img/main/tab_06/e341b6206d6f43ae8a122f343d6c6568.jpg" alt="리버벨 로고">
+                  </div>
+                </div>
+              </div>
+              <div class="coffee_product coffee_product02">
+                <div class="coffee_product_img">
+                  <img src="./img/main/tab_04/3993e6f53a0346589d5c52156a5c200d.jpg" alt="[앰비언스] 파나마 잰슨 게이샤 워시드">
+                  <div class="coffee_poduct_icons">
+                    <div><i class="xi-file-add"></i></div>
+                    <div><i class="xi-heart"></i></div>
+                    <div><i class="xi-cart-add"></i></div>
+                  </div>
+                </div>
+                <div class="coffee_product_txt">
+                  <p class="coffee_name">[앰비언스] 파나마 잰슨 게이샤 워시드</p>
+                  <span class="coffee_type">#꽃향기 & 화사한</span>
+                  <p class="coffee_price">35,000원</p>
+                </div>
+
+                <div class="coffee_logo">
+                  <div class="coffee_logo_box">
+                    <img src="./img/main/tab_02/ee270b87b5144602b10051be75046d48.jpg" alt="앰비언스 로고">
+                  </div>
+                </div>
+              </div>
+              <div class="coffee_product coffee_product03">
+                <div class="coffee_product_img">
+                  <img src="./img/main/tab_06/830b86bf5e624b8d83129a12471e9f16.jpg" alt="[컬러드 빈] BEIGE 블랜드">
+                  <div class="coffee_poduct_icons">
+                    <div><i class="xi-file-add"></i></div>
+                    <div><i class="xi-heart"></i></div>
+                    <div><i class="xi-cart-add"></i></div>
+                  </div>
+                </div>
+                <div class="coffee_product_txt">
+                  <p class="coffee_name">[컬러드 빈] BEIGE 블랜드</p>
+                  <span class="coffee_type">#꽃향기 & 깔끔한</span>
+                  <p class="coffee_price">16,000원</p>
+                </div>
+
+                <div class="coffee_logo">
+                  <div class="coffee_logo_box">
+                    <img src="./img/main/tab_06/f0032d2ee2594bb5907d0aea44303158.jpg" alt="컬러드빈 로고">
+                  </div>
+                </div>
+              </div>
+              <div class="coffee_product coffee_product04">
+                <div class="coffee_product_img">
+                  <img src="./img/main/tab_04/e1f99f02be824ee294a988bd3761dfb1.jpg" alt="[브니엘 커피] 마이로맨스">
+                  <div class="coffee_poduct_icons">
+                    <div><i class="xi-file-add"></i></div>
+                    <div><i class="xi-heart"></i></div>
+                    <div><i class="xi-cart-add"></i></div>
+                  </div>
+                </div>
+                <div class="coffee_product_txt">
+                  <p class="coffee_name">[브니엘 커피] 마이로맨스</p>
+                  <span class="coffee_type">#화사한 & 꽃향기</span>
+                  <p class="coffee_price">12,000원</p>
+                </div>
+                <div class="coffee_logo">
+                  <div class="coffee_logo_box">
+                    <img src="./img/main/tab_04/4e13897065f74741955c8142b2f92a92.jpg" alt="브니엘 커피">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- best_tab_conts -->
+    <a class="detail_btn" href="./sub.html">자세히보기</a>
+    </div>
+  </section>
+  <!-- best_product_outer -->
+
+  <section class="new_product_outer scroll_el">
+    <div class="new_product_inner inner">
+      <h2 class="eng">new</h2>
+      <p class="sub_title">새로운 원두를 즐겨보세요.</p>
+      <div class="new_product_conts origin position_top">
+        <div class="new_product_cont">
+          <div class="coffee_product coffee_product01">
+            <div class="coffee_product_img">
+              <img src="./img/main/tab_04/3c0438561e8546aebddb8492ba59960d.jpg" alt="[앰비언스] 아이리스">
+              <div class="coffee_poduct_icons">
+                <div><i class="xi-file-add"></i></div>
+                <div><i class="xi-heart"></i></div>
+                <div><i class="xi-cart-add"></i></div>
+              </div>
+            </div>
+            <div class="coffee_product_txt">
+              <p class="coffee_name">[앰비언스] 아이리스</p>
+              <span class="coffee_type">#화사한 & 과일</span>
+              <p class="coffee_price">14,000원</p>
+            </div>
+            <div class="coffee_logo">
+              <div class="coffee_logo_box">
+                <img src="./img/main/tab_02/ee270b87b5144602b10051be75046d48.jpg" alt="앰비언스 로고">
+              </div>
+            </div>
+          </div>
+          <div class="coffee_product coffee_product02">
+            <div class="coffee_product_img">
+              <img src="./img/main/tab_04/3993e6f53a0346589d5c52156a5c200d.jpg" alt="[앰비언스] 파나마 잰슨 게이샤 워시드">
+              <div class="coffee_poduct_icons">
+                <div><i class="xi-file-add"></i></div>
+                <div><i class="xi-heart"></i></div>
+                <div><i class="xi-cart-add"></i></div>
+              </div>
+            </div>
+            <div class="coffee_product_txt">
+              <p class="coffee_name">[앰비언스] 파나마 잰슨 게이샤 워시드</p>
+              <span class="coffee_type">#꽃향기 & 화사한</span>
+              <p class="coffee_price">35,000원</p>
+            </div>
+
+            <div class="coffee_logo">
+              <div class="coffee_logo_box">
+                <img src="./img/main/tab_02/ee270b87b5144602b10051be75046d48.jpg" alt="앰비언스 로고">
+              </div>
+            </div>
+          </div>
+          <div class="coffee_product coffee_product03">
+            <div class="coffee_product_img">
+              <img src="./img/main/tab_04/a53a0eeaed0e405c97bb0f58c35653c5.jpg" alt="[한국커피] 에티오피아 반코 고고티">
+              <div class="coffee_poduct_icons">
+                <div><i class="xi-file-add"></i></div>
+                <div><i class="xi-heart"></i></div>
+                <div><i class="xi-cart-add"></i></div>
+              </div>
+            </div>
+            <div class="coffee_product_txt">
+              <p class="coffee_name">[한국커피] 에티오피아 반코 고고티</p>
+              <span class="coffee_type">#과일 & 화사한</span>
+              <p class="coffee_price">16,000원</p>
+            </div>
+
+            <div class="coffee_logo">
+              <div class="coffee_logo_box">
+                <img src="./img/main/tab_04/523030e2eedf422c87d70319f493b36d.jpg" alt="한국커피로고">
+              </div>
+            </div>
+          </div>
+          <div class="coffee_product coffee_product04">
+            <div class="coffee_product_img">
+              <img src="./img/main/tab_04/e1f99f02be824ee294a988bd3761dfb1.jpg" alt="[브니엘 커피] 마이로맨스">
+              <div class="coffee_poduct_icons">
+                <div><i class="xi-file-add"></i></div>
+                <div><i class="xi-heart"></i></div>
+                <div><i class="xi-cart-add"></i></div>
+              </div>
+            </div>
+            <div class="coffee_product_txt">
+              <p class="coffee_name">[브니엘 커피] 마이로맨스</p>
+              <span class="coffee_type">#화사한 & 꽃향기</span>
+              <p class="coffee_price">12,000원</p>
+            </div>
+            <div class="coffee_logo">
+              <div class="coffee_logo_box">
+                <img src="./img/main/tab_04/4e13897065f74741955c8142b2f92a92.jpg" alt="브니엘 커피">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- best_tab_conts -->
+      <a class="detail_btn" href="#">자세히보기</a>
+    </div>
+  </section>
+  <!-- new_product_outer -->
+
+  <section class="recommend_banner_outer scroll_el">
+    <div class="recommend_bg ">
+      <img class="l origin" src="./img/banner_l.png" alt="원두이미지">
+      <img class="r origin" src="./img/banner_r.png" alt="원두이미지">
+      <div class="recommend_inner inner">
+        <div class="recommend_txt origin position_top ">
+          <h3 class="recommend_banner_title ">
+            내 입맛에 꼭 맞는 커피로 추천받고 구독하세요.
+          </h3>
+          <p>내 취향에 딱 맞는 원두를 추천해요.<br>
+            구독을 시작하고 항상 무료배송으로 받아보세요.</p>
+          <a class="main_btn main_btn02" href="#!">30초만에 커피 추천받기 <i class="xi-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="pro origin position_top delay_02">
+        <img class="p01" src="./img/main/banner_01.png" alt="수수커피">
+        <img class="p02" src="./img/main/banner_02.png" alt="수수커피">
+        <img class="p03" src="./img/main/banner_03.png" alt="수수커피">
+        <img class="p04" src="./img/main/banner_04.png" alt="수수커피">
+        <img class="p05" src="./img/main/banner_05.png" alt="수수커피">
+        <img class="p06" src="./img/main/banner_06.png" alt="수수커피">
+      </div>
+    </div>
+  </section>
+  <!-- recommend_banner_outer -->
+
+  <section class="hot_outer">
+    <div class="hot_inner inner">
+      <h2 class="eng">2022 <span style="color:#ff6c57">HOT</span></h2>
+      <p class="sub_title">다양한 수상경력으로 맛과 품질이 검증된 로스터리와 함께해요.</p>
+      <div class="hot_container">
+        <div class="hot_container_l">
+          <ul class="hot_tab">
+            <li class="coffee_logo_h">
+              <a class="on" href="#hot01">
+                <div class="hot_logo">
+                  <div class="coffee_logo_hot"><img src="./img/main/2022HOT_imgs/werk_logo.png" alt="베르크">
+                  </div>
+                  <div class="logo_name">베르크</div>
+                </div>
+              </a>
+            </li>
+            <li class="coffee_logo_h">
+              <a href="#hot02">
+                <div class="hot_logo">
+                  <div class="coffee_logo_hot">
+                    <img src="./img/main/2022HOT_imgs/ssc_logo.jpg" alt="수수커피">
+                  </div>
+                  <div class="logo_name">수수커피</div>
+                </div>
+              </a>
+            </li>
+            <li class="coffee_logo_h">
+              <a href="#hot04">
+                <div class="hot_logo">
+                  <div class="coffee_logo_hot">
+                    <img src="./img/main/2022HOT_imgs/alexthecoffee_logo.png" alt=" 알렉스 더 커피">
+                  </div>
+                  <div class="logo_name"> 알렉스 더 커피</div>
+                </div>
+              </a>
+            </li>
+            <li class="coffee_logo_h">
+              <a href="#hot03">
+                <div class="hot_logo">
+                  <div class="coffee_logo_hot">
+                    <img src="./img/main/2022HOT_imgs/connectscoffee_logo.png" alt="커넥츠">
+                  </div>
+                  <div class="logo_name"> 커넥츠 </div>
+                </div>
+              </a>
+            </li>
+            <li class="coffee_logo_h">
+              <a href="#hot05">
+                <div class="hot_logo">
+                  <div class="coffee_logo_hot">
+                    <img src="./img/main/2022HOT_imgs/felt_logo.png" alt="펠트">
+                  </div>
+                  <div class="logo_name">펠트</div>
+                </div>
+              </a>
+            </li>
+            <li class="coffee_logo_h">
+              <a href="#hot06">
+                <div class="hot_logo">
+                  <div class="coffee_logo_hot">
+                    <img src="./img/main/2022HOT_imgs/55do_logo.png" alt="55˚커피">
+                  </div>
+                  <div class="logo_name">55˚커피</div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="hot_container_r">
+          <div class="hot_tab_conts hot_conts">
+            <div id="hot01" class="hot_tab_cont hot_tab_cont01 hot_conts_on">
+              <div class="hot_right_box">
+                <div class="hot_right_swiper_outer swiper">
+                  <div class="hot_right_swiper swiper-wrapper">
+                    <div class="hot_right_slide hot_right_slide01 swiper-slide">
+                      <div class="hot_right_top">
+                        <div class="hot_right_top_l">
+                          <img src="./img/main/2022HOT_imgs/werk_03.png" alt="werk">
+                        </div>
+                        <div class="hot_right_top_r">
+                          <div class="coffee_product_txt">
+                            <p class="coffee_name">에티오피아 리무 블렌소</p>
+                            <span class="coffee_type">초콜릿 & 과일</span>
+                            <p class="coffee_price">19,000원&middot;<span>250g</span></p>
+                          </div>
+                          <div class="coffee_product_txt02">
+                            내추럴 프로세싱 특유의 건포도 향미가 선명히 느껴지며, 좋은 클린컵의 부드러운 산미는 오렌지의 향미로 느껴집니다. 부드러운 질감과 묵직한 초콜릿의 단맛이 긴 여운을
+                            남기는
+                            복합적인 향미와 단맛의 여운이 좋은 커피입니다.
+                          </div>
+                          <div class="coffee_product_txt03">
+                            <div class="coffee_logo_h">
+                              <div class="coffee_logo_box">
+                                <img src="./img/main/2022HOT_imgs/werk_logo.png" alt="베르크">
+                              </div>
+                              <div class="coffee_logo_name">
+                                베르크 로스터스 <span>Roaster`s Note</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- hot_right_top_r -->
+                      </div>
+                      <!-- hot_right_top -->
+                    </div>
+                    <div class="hot_right_slide hot_right_slide02 swiper-slide">
+                      <div class="hot_right_top">
+                        <div class="hot_right_top_l">
+                          <img src="./img/main/2022HOT_imgs/werk_01.png" alt="werk">
+                        </div>
+                        <div class="hot_right_top_r">
+                          <div class="coffee_product_txt">
+                            <p class="coffee_name">BABY BLEND</p>
+                            <span class="coffee_type">깔끔한 & 달콤 </span>
+                            <p class="coffee_price">16,000원&middot;<span>250g</span></p>
+                          </div>
+                          <div class="coffee_product_txt02">
+                            탄맛이나 날카로운 신맛이 없이 처음부터 끝까지 먹기 편안하고 화려하지 않은 커피입니다. 고소한 브라운슈가, 캬라멜의 부드러운 질감과 풍부한 단맛을 느낄 수 있어요.
+                            블랙커피와 밀크베리에이션을 동시에 고려했어요.
+                          </div>
+                          <div class="coffee_product_txt03">
+                            <div class="coffee_logo_h">
+                              <div class="coffee_logo_box">
+                                <img src="./img/main/2022HOT_imgs/werk_logo.png" alt="베르크">
+                              </div>
+                              <div class="coffee_logo_name">
+                                베르크 로스터스 <span>Roaster`s Note</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- hot_right_top_r -->
+                      </div>
+                      <!-- hot_right_top -->
+                    </div>
+                    <div class="hot_right_slide hot_right_slide03 swiper-slide">
+                      <div class="hot_right_top">
+                        <div class="hot_right_top_l">
+                          <img src="./img/main/2022HOT_imgs/werk_01.png" alt="werk">
+                        </div>
+                        <div class="hot_right_top_r">
+                          <div class="coffee_product_txt">
+                            <p class="coffee_name">HAUS BLEND</p>
+                            <span class="coffee_type">묵직한 & 풍부한</span>
+                            <p class="coffee_price">16,000원&middot;<span>250g</span></p>
+                          </div>
+                          <div class="coffee_product_txt02">
+                            부정적인 맛이 없이 처음부터 끝까지 마시기 편안합니다.
+                            다크 초콜릿의 풍부한 단맛을 느낄 수 있고, 묵직한 바디감과 후미까지 길게 이어지는 진한 커피향을
+                            경험해보세요.
+                          </div>
+                          <div class="coffee_product_txt03">
+                            <div class="coffee_logo_h">
+                              <div class="coffee_logo_box">
+                                <img src="./img/main/2022HOT_imgs/werk_logo.png" alt="베르크">
+                              </div>
+                              <div class="coffee_logo_name">
+                                베르크 로스터스 <span>Roaster`s Note</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- hot_right_top_r -->
+                      </div>
+                      <!-- hot_right_top -->
+                    </div>
+                  </div>
+                </div>
+
+                <div class="hot_right_arrow">
+                  <div class="arrow_left"><i class="xi-angle-left-thin"></i></div>
+                  <div class="arrow_right"><i class="xi-angle-right-thin"></i></div>
+                </div>
+
+                <div class="hot_right_bottom swiper gallery-thumb-box gallery-thumb-swiper">
+                  <div class="coffee_product_hots swiper-wrapper">
+                    <div class="coffee_product_hot swiper-slide">
+                      <div class="coffee_product">
+                        <div class="coffee_product_img">
+                          <img src="./img/main/2022HOT_imgs/werk_01.png" alt="">
+                        </div>
+                        <div class="coffee_product_txt">
+                          <p class="coffee_name">에티오피아 리무 블렌소</p>
+                          <span class="coffee_type">초콜릿 & 과일</span>
+                          <p class="coffee_price">19,000원</p>
+                        </div>
+                      </div>
+                      <!-- coffee_product -->
+                    </div>
+                    <div class="coffee_product_hot swiper-slide">
+                      <div class="coffee_product">
+                        <div class="coffee_product_img">
+                          <img src="./img/main/2022HOT_imgs/werk_03.png" alt="">
+                        </div>
+                        <div class="coffee_product_txt">
+                          <p class="coffee_name">BABY BLEND</p>
+                          <span class="coffee_type">깔끔한 & 달콤 </span>
+                          <p class="coffee_price">16,000원</p>
+                        </div>
+                      </div>
+                      <!-- coffee_product -->
+                    </div>
+                    <div class="coffee_product_hot swiper-slide">
+                      <div class="coffee_product">
+                        <div class="coffee_product_img">
+                          <img src="./img/main/2022HOT_imgs/werk_02.png" alt="">
+                        </div>
+                        <div class="coffee_product_txt">
+                          <p class="coffee_name">HAUS BLEND</p>
+                          <span class="coffee_type">묵직한 & 풍부한</span>
+                          <p class="coffee_price">16,000원</p>
+                        </div>
+                      </div>
+                      <!-- coffee_product -->
+                    </div>
+                  </div>
+                </div>
+                <!-- hot_right_bottom -->
+              </div>
+            </div>
+            <div id="hot02" class="hot_tab_cont hot_tab_cont02">
+              <div class="hot_right_box">
+                <div class="hot_right_swiper_outer  swiper">
+                  <div class="hot_right_swiper  swiper-wrapper">
+                    <div class="hot_right_slide hot_right_slide01 swiper-slide">
+                      <div class="hot_right_top">
+                        <div class="hot_right_top_l">
+                          <img src="./img/main/2022HOT_imgs/ssc_01.png" alt="ssc">
+                        </div>
+                        <div class="hot_right_top_r">
+                          <div class="coffee_product_txt">
+                            <p class="coffee_name">콜롬비아 파넬라 스티키 핑크비번</p>
+                            <span class="coffee_type">상큼 & 깔끔한</span>
+                            <p class="coffee_price">25,000원&middot;<span>250g</span></p>
+                          </div>
+                          <div class="coffee_product_txt02">
+                            청포도의 산미와 단맛이 함께 느껴져요. 디저트가 필요한 오후에 드시면 좋을 커피입니다.
+                          </div>
+                          <div class="coffee_product_txt03">
+                            <div class="coffee_logo_h">
+                              <div class="coffee_logo_box">
+                                <img src="./img/main/2022HOT_imgs/ssc_logo.jpg" alt="수수커피">
+                              </div>
+                              <div class="coffee_logo_name">
+                                수수커피 로스터스 <span>Roaster`s Note</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- hot_right_top_r -->
+                      </div>
+                      <!-- hot_right_top -->
+                    </div>
+                    <div class="hot_right_slide hot_right_slide02 swiper-slide">
+                      <div class="hot_right_top">
+                        <div class="hot_right_top_l">
+                          <img src="./img/main/2022HOT_imgs/ssc_02.png" alt="ssc">
+                        </div>
+                        <div class="hot_right_top_r">
+                          <div class="coffee_product_txt">
+                            <p class="coffee_name">콜롬비아 타비 인디오</p>
+                            <span class="coffee_type">밸런스 & 부드러운 </span>
+                            <p class="coffee_price">26,000원&middot;<span>250g</span></p>
+                          </div>
+                          <div class="coffee_product_txt02">
+                            첫 모금의 파인애플의 단맛이 매력적입니다. 이후 따라오는 케인 슈가와 카카오닙스의 노트가 좋은 밸런스를 만들어 줍니다.
+                          </div>
+                          <div class="coffee_product_txt03">
+                            <div class="coffee_logo_h">
+                              <div class="coffee_logo_box">
+                                <img src="./img/main/2022HOT_imgs/ssc_logo.jpg" alt="수수커피">
+                              </div>
+                              <div class="coffee_logo_name">
+                                수수커피 로스터스 <span>Roaster`s Note</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- hot_right_top_r -->
+                      </div>
+                      <!-- hot_right_top -->
+                    </div>
+                    <div class="hot_right_slide hot_right_slide03 swiper-slide">
+                      <div class="hot_right_top">
+                        <div class="hot_right_top_l">
+                          <img src="./img/main/2022HOT_imgs/ssc_03.png" alt="ssc">
+                        </div>
+                        <div class="hot_right_top_r">
+                          <div class="coffee_product_txt">
+                            <p class="coffee_name">에티오피아 시다모 두완초</p>
+                            <span class="coffee_type">달콤 & 깔끔한</span>
+                            <p class="coffee_price">29,000원&middot;<span>250g</span></p>
+                          </div>
+                          <div class="coffee_product_txt02">
+                            블루베리와 열대과일의 은은한 과일향과 클린한 애프터가 좋아요.
+                          </div>
+                          <div class="coffee_product_txt03">
+                            <div class="coffee_logo_h">
+                              <div class="coffee_logo_box">
+                                <img src="./img/main/2022HOT_imgs/ssc_logo.jpg" alt="수수커피">
+                              </div>
+                              <div class="coffee_logo_name">
+                                수수커피 로스터스 <span>Roaster`s Note</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- hot_right_top_r -->
+                      </div>
+                      <!-- hot_right_top -->
+                    </div>
+                  </div>
+                </div>
+
+                <div class="hot_right_arrow">
+                  <div class="arrow_left"><i class="xi-angle-left-thin"></i></div>
+                  <div class="arrow_right"><i class="xi-angle-right-thin"></i></div>
+                </div>
+
+                <div class="hot_right_bottom swiper gallery-thumb-box gallery-thumb-swiper">
+                  <div class="coffee_product_hots swiper-wrapper">
+                    <div class="coffee_product_hot swiper-slide">
+                      <div class="coffee_product">
+                        <div class="coffee_product_img">
+                          <img src="./img/main/2022HOT_imgs/ssc_01.png" alt="">
+                        </div>
+                        <div class="coffee_product_txt">
+                          <p class="coffee_name">콜롬비아 파넬라 스티키</p>
+                          <span class="coffee_type">상큼 & 깔끔한</span>
+                          <p class="coffee_price">25,000원</p>
+                        </div>
+                      </div>
+                      <!-- coffee_product -->
+                    </div>
+                    <div class="coffee_product_hot swiper-slide">
+                      <div class="coffee_product">
+                        <div class="coffee_product_img">
+                          <img src="./img/main/2022HOT_imgs/ssc_02.png" alt="">
+                        </div>
+                        <div class="coffee_product_txt">
+                          <p class="coffee_name">콜롬비아 타비 인디오</p>
+                          <span class="coffee_type">밸런스 & 부드러운</span>
+                          <p class="coffee_price">26,000원</p>
+                        </div>
+                      </div>
+                      <!-- coffee_product -->
+                    </div>
+                    <div class="coffee_product_hot swiper-slide">
+                      <div class="coffee_product">
+                        <div class="coffee_product_img">
+                          <img src="./img/main/2022HOT_imgs/ssc_03.png" alt="">
+                        </div>
+                        <div class="coffee_product_txt">
+                          <p class="coffee_name">에티오피아 시다모 두완초</p>
+                          <span class="coffee_type">달콤 & 깔끔한</span>
+                          <p class="coffee_price">29,000원</p>
+                        </div>
+                      </div>
+                      <!-- coffee_product -->
+                    </div>
+                  </div>
+                </div>
+                <!-- hot_right_bottom -->
+              </div>
+            </div>
+            <div id="hot03" class="hot_tab_cont hot_tab_cont03">
+              <div class="hot_right_box">
+                <div class="hot_right_swiper_outer swiper">
+                  <div class="hot_right_swiper swiper-wrapper">
+                    <div class="hot_right_slide hot_right_slide01 swiper-slide">
+                      <div class="hot_right_top">
+                        <div class="hot_right_top_l">
+                          <img src="./img/main/2022HOT_imgs/connectscoffee_01.png" alt="connectscoffee">
+                        </div>
+                        <div class="hot_right_top_r">
+                          <div class="coffee_product_txt">
+                            <p class="coffee_name">뉴커먼</p>
+                            <span class="coffee_type">고소&묵직한</span>
+                            <p class="coffee_price">12,000원&middot;<span>250g</span></p>
+                          </div>
+                          <div class="coffee_product_txt02">
+                            견과류의 고소함을 베이스로 깊은 바디감이 잘 어울리는 균형감이 좋은 블렌드입니다.
+                          </div>
+                          <div class="coffee_product_txt03">
+                            <div class="coffee_logo_h">
+                              <div class="coffee_logo_box">
+                                <img src="./img/main/2022HOT_imgs/connectscoffee_logo.png" alt="커넥츠 커피">
+                              </div>
+                              <div class="coffee_logo_name">
+                                커넥츠 커피 로스터스 <span>Roaster`s Note</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- hot_right_top_r -->
+                      </div>
+                      <!-- hot_right_top -->
+                    </div>
+                    <div class="hot_right_slide hot_right_slide02 swiper-slide">
+                      <div class="hot_right_top">
+                        <div class="hot_right_top_l">
+                          <img src="./img/main/2022HOT_imgs/connectscoffee_02.png" alt="connectscoffee">
+                        </div>
+                        <div class="hot_right_top_r">
+                          <div class="coffee_product_txt">
+                            <p class="coffee_name">뉴커먼</p>
+                            <span class="coffee_type">고소&묵직한</span>
+                            <p class="coffee_price">12,000원&middot;<span>250g</span></p>
+                          </div>
+                          <div class="coffee_product_txt02">
+                            다크 초콜릿의 쌉싸름함과 단맛이 뛰어나고, 뒤에서 느껴지는 스모크함이 개성 있게 느껴지는 블렌드입니다.
+                          </div>
+                          <div class="coffee_product_txt03">
+                            <div class="coffee_logo_h">
+                              <div class="coffee_logo_box">
+                                <img src="./img/main/2022HOT_imgs/connectscoffee_logo.png" alt="커넥츠 커피">
+                              </div>
+                              <div class="coffee_logo_name">
+                                커넥츠 커피 로스터스 <span>Roaster`s Note</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- hot_right_top_r -->
+                      </div>
+                      <!-- hot_right_top -->
+                    </div>
+                    <div class="hot_right_slide hot_right_slide03 swiper-slide">
+                      <div class="hot_right_top">
+                        <div class="hot_right_top_l">
+                          <img src="./img/main/2022HOT_imgs/connectscoffee_03.png" alt="connectscoffee">
+                        </div>
+                        <div class="hot_right_top_r">
+                          <div class="coffee_product_txt">
+                            <p class="coffee_name">뉴커먼</p>
+                            <span class="coffee_type">고소&묵직한</span>
+                            <p class="coffee_price">12,000원&middot;<span>250g</span></p>
+                          </div>
+                          <div class="coffee_product_txt02">
+                            브라운슈가의 단맛을 베이스로 건과일의 향미가 느껴지는 균형감이 뛰어난 스페셜티 블렌딩 입니다.
+                          </div>
+                          <div class="coffee_product_txt03">
+                            <div class="coffee_logo_h">
+                              <div class="coffee_logo_box">
+                                <img src="./img/main/2022HOT_imgs/connectscoffee_logo.png" alt="커넥츠 커피">
+                              </div>
+                              <div class="coffee_logo_name">
+                                커넥츠 커피 로스터스 <span>Roaster`s Note</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- hot_right_top_r -->
+                      </div>
+                      <!-- hot_right_top -->
+                    </div>
+                  </div>
+                </div>
+                <div class="hot_right_arrow">
+                  <div class="arrow_left"><i class="xi-angle-left-thin"></i></div>
+                  <div class="arrow_right"><i class="xi-angle-right-thin"></i></div>
+                </div>
+
+                <div class="hot_right_bottom swiper gallery-thumb-box gallery-thumb-swiper">
+                  <div class="coffee_product_hots swiper-wrapper">
+                    <div class="coffee_product_hot swiper-slide">
+                      <div class="coffee_product">
+                        <div class="coffee_product_img">
+                          <img src="./img/main/2022HOT_imgs/connectscoffee_01.png" alt="">
+                        </div>
+                        <div class="coffee_product_txt">
+                          <p class="coffee_name">뉴커먼</p>
+                          <span class="coffee_type">고소&묵직한</span>
+                          <p class="coffee_price">12,000원</p>
+                        </div>
+                      </div>
+                      <!-- coffee_product -->
+                    </div>
+                    <div class="coffee_product_hot swiper-slide">
+                      <div class="coffee_product">
+                        <div class="coffee_product_img">
+                          <img src="./img/main/2022HOT_imgs/connectscoffee_02.png" alt="">
+                        </div>
+                        <div class="coffee_product_txt">
+                          <p class="coffee_name">발렌타인</p>
+                          <span class="coffee_type">쌉쌀&묵직한</span>
+                          <p class="coffee_price">13,000원</p>
+                        </div>
+                      </div>
+                      <!-- coffee_product -->
+                    </div>
+                    <div class="coffee_product_hot swiper-slide">
+                      <div class="coffee_product">
+                        <div class="coffee_product_img">
+                          <img src="./img/main/2022HOT_imgs/connectscoffee_03.png" alt="">
+                        </div>
+                        <div class="coffee_product_txt">
+                          <p class="coffee_name">커넥츠 블렌드</p>
+                          <span class="coffee_type">밸런스&부드러운</span>
+                          <p class="coffee_price">14,000원</p>
+                        </div>
+                      </div>
+                      <!-- coffee_product -->
+                    </div>
+                  </div>
+                </div>
+                <!-- hot_right_bottom -->
+              </div>
+            </div>
+            <div id="hot04" class="hot_tab_cont hot_tab_cont04">
+              <div class="hot_right_box">
+                <div class="hot_right_swiper_outer swiper">
+                  <div class="hot_right_swiper swiper-wrapper">
+                    <div class="hot_right_slide hot_right_slide01 swiper-slide">
+                      <div class="hot_right_top">
+                        <div class="hot_right_top_l">
+                          <img src="./img/main/2022HOT_imgs/alexthecoffee_01.png" alt="알렉스더커피">
+                        </div>
+                        <div class="hot_right_top_r">
+                          <div class="coffee_product_txt">
+                            <p class="coffee_name">인도 바드라 아라비카</p>
+                            <span class="coffee_type">초콜릿&묵직한</span>
+                            <p class="coffee_price">15,000원&middot;<span>250g</span></p>
+                          </div>
+                          <div class="coffee_product_txt02">
+                            열대과일과 리치의 향이 풍부합니다.
+                            은은한 산미와 다양한 단맛들이 입을 즐겁게 하는 커피입니다.
+                          </div>
+                          <div class="coffee_product_txt03">
+                            <div class="coffee_logo_h">
+                              <div class="coffee_logo_box">
+                                <img src="./img/main/2022HOT_imgs/alexthecoffee_logo.png" alt="">
+                              </div>
+                              <div class="coffee_logo_name">
+                                알렉스 더 커피 로스터스 <span>Roaster`s Note</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- hot_right_top -->
+                    </div>
+                    <div class="hot_right_slide hot_right_slide01 swiper-slide">
+                      <div class="hot_right_top">
+                        <div class="hot_right_top_l">
+                          <img src="./img/main/2022HOT_imgs/alexthecoffee_01.png" alt="알렉스더커피">
+                        </div>
+                        <div class="hot_right_top_r">
+                          <div class="coffee_product_txt">
+                            <p class="coffee_name">인도 바드라 아라비카</p>
+                            <span class="coffee_type">초콜릿&묵직한</span>
+                            <p class="coffee_price">15,000원&middot;<span>250g</span></p>
+                          </div>
+                          <div class="coffee_product_txt02">
+                            열대과일과 리치의 향이 풍부합니다.
+                            은은한 산미와 다양한 단맛들이 입을 즐겁게 하는 커피입니다.
+                          </div>
+                          <div class="coffee_product_txt03">
+                            <div class="coffee_logo_h">
+                              <div class="coffee_logo_box">
+                                <img src="./img/main/2022HOT_imgs/alexthecoffee_logo.png" alt="">
+                              </div>
+                              <div class="coffee_logo_name">
+                                알렉스 더 커피 로스터스 <span>Roaster`s Note</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- hot_right_top -->
+                    </div>
+                    <div class="hot_right_slide hot_right_slide01 swiper-slide">
+                      <div class="hot_right_top">
+                        <div class="hot_right_top_l">
+                          <img src="./img/main/2022HOT_imgs/alexthecoffee_01.png" alt="알렉스더커피">
+                        </div>
+                        <div class="hot_right_top_r">
+                          <div class="coffee_product_txt">
+                            <p class="coffee_name">인도 바드라 아라비카</p>
+                            <span class="coffee_type">초콜릿&묵직한</span>
+                            <p class="coffee_price">15,000원&middot;<span>250g</span></p>
+                          </div>
+                          <div class="coffee_product_txt02">
+                            열대과일과 리치의 향이 풍부합니다.
+                            은은한 산미와 다양한 단맛들이 입을 즐겁게 하는 커피입니다.
+                          </div>
+                          <div class="coffee_product_txt03">
+                            <div class="coffee_logo_h">
+                              <div class="coffee_logo_box">
+                                <img src="./img/main/2022HOT_imgs/alexthecoffee_logo.png" alt="">
+                              </div>
+                              <div class="coffee_logo_name">
+                                알렉스 더 커피 로스터스 <span>Roaster`s Note</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- hot_right_top -->
+                    </div>
+                  </div>
+                </div>
+                <div class="hot_right_arrow">
+                  <div class="arrow_left"><i class="xi-angle-left-thin"></i></div>
+                  <div class="arrow_right"><i class="xi-angle-right-thin"></i></div>
+                </div>
+                <div class="hot_right_bottom swiper gallery-thumb-box gallery-thumb-swiper">
+                  <div class="coffee_product_hots swiper-wrapper">
+                    <div class="coffee_product_hot swiper-slide">
+                      <div class="coffee_product">
+                        <div class="coffee_product_img">
+                          <img src="./img/main/2022HOT_imgs/alexthecoffee_01.png" alt="">
+                        </div>
+                        <div class="coffee_product_txt">
+                          <p class="coffee_name">인도 바드라 아라비카</p>
+                          <span class="coffee_type">초콜릿&묵직한</span>
+                          <p class="coffee_price">15,000원</p>
+                        </div>
+                      </div>
+                      <!-- coffee_product -->
+                    </div>
+                    <div class="coffee_product_hot swiper-slide">
+                      <div class="coffee_product">
+                        <div class="coffee_product_img">
+                          <img src="./img/main/2022HOT_imgs/alexthecoffee_02.png" alt="">
+                        </div>
+                        <div class="coffee_product_txt">
+                          <p class="coffee_name">콜롬비아 엘 파라이소 리치</p>
+                          <span class="coffee_type">과일&달콤</span>
+                          <p class="coffee_price">20,000원</p>
+                        </div>
+                      </div>
+                      <!-- coffee_product -->
+                    </div>
+                    <div class="coffee_product_hot swiper-slide">
+                      <div class="coffee_product">
+                        <div class="coffee_product_img">
+                          <img src="./img/main/2022HOT_imgs/alexthecoffee_03.png" alt="">
+                        </div>
+                        <div class="coffee_product_txt">
+                          <p class="coffee_name">케냐 구아마 AA</p>
+                          <span class="coffee_type">달콤&상큼</span>
+                          <p class="coffee_price">16,000원</p>
+                        </div>
+                      </div>
+                      <!-- coffee_product -->
+                    </div>
+                  </div>
+                </div>
+                <!-- hot_right_bottom -->
+              </div>
+            </div>
+            <div id="hot05" class="hot_tab_cont hot_tab_cont05">
+              <div class="hot_right_box">
+                <div class="hot_right_swiper_outer swiper">
+                  <div class="hot_right_swiper swiper-wrapper">
+                    <div class="hot_right_slide hot_right_slide01 swiper-slide">
+                      <div class="hot_right_top">
+                        <div class="hot_right_top_l">
+                          <img src="./img/main/2022HOT_imgs/felt_01.png" alt="펠트커피">
+                        </div>
+                        <div class="hot_right_top_r">
+                          <div class="coffee_product_txt">
+                            <p class="coffee_name">Classic Blend</p>
+                            <span class="coffee_type">밸런스&깔끔한</span>
+                            <p class="coffee_price">15,000원&middot;<span>250g</span></p>
+                          </div>
+                          <div class="coffee_product_txt02">
+                            밀크 초콜릿의 단맛, 견과류의 고소함, 은은한 산미가 균형을 이룬 복합적인 향미를 지닌 블렌드입니다.
+                          </div>
+                          <div class="coffee_product_txt03">
+                            <div class="coffee_logo_h">
+                              <div class="coffee_logo_box">
+                                <img src="./img/main/2022HOT_imgs/felt_logo.png" alt="펠트커피">
+                              </div>
+                              <div class="coffee_logo_name">
+                                펠트커피 로스터스 <span>Roaster`s Note</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- hot_right_top -->
+                    </div>
+                    <div class="hot_right_slide hot_right_slide01 swiper-slide">
+                      <div class="hot_right_top">
+                        <div class="hot_right_top_l">
+                          <img src="./img/main/2022HOT_imgs/felt_02.png" alt="펠트커피">
+                        </div>
+                        <div class="hot_right_top_r">
+                          <div class="coffee_product_txt">
+                            <p class="coffee_name">Decaffeinated Blend</p>
+                            <span class="coffee_type">고소&부드러운</span>
+                            <p class="coffee_price">15,000원&middot;<span>250g</span></p>
+                          </div>
+                          <div class="coffee_product_txt02">
+                            흑설탕의 깊은 단맛, 견과류의 고소함, 은은한 산미가 균형을 이룬 부드럽고 풍부한 질감을 느낄 수 있습니다.
+                          </div>
+                          <div class="coffee_product_txt03">
+                            <div class="coffee_logo_h">
+                              <div class="coffee_logo_box">
+                                <img src="./img/main/2022HOT_imgs/felt_logo.png" alt="펠트커피">
+                              </div>
+                              <div class="coffee_logo_name">
+                                펠트커피 로스터스 <span>Roaster`s Note</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- hot_right_top -->
+                    </div>
+                    <div class="hot_right_slide hot_right_slide01 swiper-slide">
+                      <div class="hot_right_top">
+                        <div class="hot_right_top_l">
+                          <img src="./img/main/2022HOT_imgs/felt_03.png" alt="펠트커피">
+                        </div>
+                        <div class="hot_right_top_r">
+                          <div class="coffee_product_txt">
+                            <p class="coffee_name">Seasonal Blend</p>
+                            <span class="coffee_type">상큼&깔끔한</span>
+                            <p class="coffee_price">15,000원&middot;<span>250g</span></p>
+                          </div>
+                          <div class="coffee_product_txt02">
+                            신선한 과일의 달콤함과 상큼함, 카라멜의 단맛이 조화를 이룬 실크처럼 부드러운 감촉의 계절 블렌드 입니다.
+                          </div>
+                          <div class="coffee_product_txt03">
+                            <div class="coffee_logo_h">
+                              <div class="coffee_logo_box">
+                                <img src="./img/main/2022HOT_imgs/felt_logo.png" alt="펠트커피">
+                              </div>
+                              <div class="coffee_logo_name">
+                                펠트커피 로스터스 <span>Roaster`s Note</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- hot_right_top -->
+                    </div>
+                  </div>
+                </div>
+                <div class="hot_right_arrow">
+                  <div class="arrow_left"><i class="xi-angle-left-thin"></i></div>
+                  <div class="arrow_right"><i class="xi-angle-right-thin"></i></div>
+                </div>
+                <div class="hot_right_bottom swiper gallery-thumb-box gallery-thumb-swiper">
+                  <div class="coffee_product_hots swiper-wrapper">
+                    <div class="coffee_product_hot swiper-slide">
+                      <div class="coffee_product">
+                        <div class="coffee_product_img">
+                          <img src="./img/main/2022HOT_imgs/felt_01.png" alt="펠트커피">
+                        </div>
+                        <div class="coffee_product_txt">
+                          <p class="coffee_name">Classic Blend</p>
+                          <span class="coffee_type">밸런스&깔끔한</span>
+                          <p class="coffee_price">15,000원</p>
+                        </div>
+                      </div>
+                      <!-- coffee_product -->
+                    </div>
+                    <div class="coffee_product_hot swiper-slide">
+                      <div class="coffee_product">
+                        <div class="coffee_product_img">
+                          <img src="./img/main/2022HOT_imgs/felt_02.png" alt="펠트커피">
+                        </div>
+                        <div class="coffee_product_txt">
+                          <p class="coffee_name">Decaffeinated Blend</p>
+                          <span class="coffee_type">고소&부드러운</span>
+                          <p class="coffee_price">20,000원</p>
+                        </div>
+                      </div>
+                      <!-- coffee_product -->
+                    </div>
+                    <div class="coffee_product_hot swiper-slide">
+                      <div class="coffee_product">
+                        <div class="coffee_product_img">
+                          <img src="./img/main/2022HOT_imgs/felt_03.png" alt="펠트커피">
+                        </div>
+                        <div class="coffee_product_txt">
+                          <p class="coffee_name">Seasonal Blend</p>
+                          <span class="coffee_type">상큼&깔끔한</span>
+                          <p class="coffee_price">16,000원</p>
+                        </div>
+                      </div>
+                      <!-- coffee_product -->
+                    </div>
+                  </div>
+                </div>
+                <!-- hot_right_bottom -->
+              </div>
+            </div>
+            <div id="hot06" class="hot_tab_cont hot_tab_cont06">
+              <div class="hot_right_box">
+                <div class="hot_right_swiper_outer swiper">
+                  <div class="hot_right_swiper swiper-wrapper">
+                    <div class="hot_right_slide hot_right_slide01 swiper-slide">
+                      <div class="hot_right_top">
+                        <div class="hot_right_top_l">
+                          <img src="./img/main/2022HOT_imgs/55do_01.png" alt="55do커피">
+                        </div>
+                        <div class="hot_right_top_r">
+                          <div class="coffee_product_txt">
+                            <p class="coffee_name">44도 블렌드</p>
+                            <span class="coffee_type">달콤&밸런스</span>
+                            <p class="coffee_price">9,000원&middot;<span>250g</span></p>
+                          </div>
+                          <div class="coffee_product_txt02">
+                            바디감과 달콤함이 적절한 밸런스에 초점을 두며, 초콜릿티와 호두같은 고소함이 매력적인 블렌드입니다.
+                          </div>
+                          <div class="coffee_product_txt03">
+                            <div class="coffee_logo_h">
+                              <div class="coffee_logo_box">
+                                <img src="./img/main/2022HOT_imgs/55do_logo.png" alt="55˚커피">
+                              </div>
+                              <div class="coffee_logo_name">
+                                55˚ 커피 로스터스 <span>Roaster`s Note</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- hot_right_top -->
+                    </div>
+                    <div class="hot_right_slide hot_right_slide01 swiper-slide">
+                      <div class="hot_right_top">
+                        <div class="hot_right_top_l">
+                          <img src="./img/main/2022HOT_imgs/55do_01.png" alt="55do커피">
+                        </div>
+                        <div class="hot_right_top_r">
+                          <div class="coffee_product_txt">
+                            <p class="coffee_name">과테말라 엘 소코로 레드버번</p>
+                            <span class="coffee_type">밸런스&달콤</span>
+                            <p class="coffee_price">10,000원&middot;<span>250g</span></p>
+                          </div>
+                          <div class="coffee_product_txt02">
+                            바디감과 달콤함이 적절한 밸런스에 초점을 두며, 초콜릿티와 호두같은 고소함이 매력적인 블렌드입니다.
+                          </div>
+                          <div class="coffee_product_txt03">
+                            <div class="coffee_logo_h">
+                              <div class="coffee_logo_box">
+                                <img src="./img/main/2022HOT_imgs/55do_logo.png" alt="55˚커피">
+                              </div>
+                              <div class="coffee_logo_name">
+                                55˚ 커피 로스터스 <span>Roaster`s Note</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- hot_right_top -->
+                    </div>
+                    <div class="hot_right_slide hot_right_slide01 swiper-slide">
+                      <div class="hot_right_top">
+                        <div class="hot_right_top_l">
+                          <img src="./img/main/2022HOT_imgs/55do_01.png" alt="55do커피">
+                        </div>
+                        <div class="hot_right_top_r">
+                          <div class="coffee_product_txt">
+                            <p class="coffee_name">66도 블렌드</p>
+                            <span class="coffee_type">밸런스&깔끔한</span>
+                            <p class="coffee_price">10,000원&middot;<span>250g</span></p>
+                          </div>
+                          <div class="coffee_product_txt02">
+                            바디감과 달콤함이 적절한 밸런스에 초점을 두며, 초콜릿티와 호두같은 고소함이 매력적인 블렌드입니다.
+                          </div>
+                          <div class="coffee_product_txt03">
+                            <div class="coffee_logo_h">
+                              <div class="coffee_logo_box">
+                                <img src="./img/main/2022HOT_imgs/55do_logo.png" alt="55˚커피">
+                              </div>
+                              <div class="coffee_logo_name">
+                                55˚ 커피 로스터스 <span>Roaster`s Note</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- hot_right_top -->
+                    </div>
+                  </div>
+                </div>
+                <div class="hot_right_arrow">
+                  <div class="arrow_left"><i class="xi-angle-left-thin"></i></div>
+                  <div class="arrow_right"><i class="xi-angle-right-thin"></i></div>
+                </div>
+                <div class="hot_right_bottom swiper gallery-thumb-box gallery-thumb-swiper">
+                  <div class="coffee_product_hots swiper-wrapper">
+                    <div class="coffee_product_hot swiper-slide">
+                      <div class="coffee_product">
+                        <div class="coffee_product_img">
+                          <img src="./img/main/2022HOT_imgs/55do_01.png" alt="55do">
+                        </div>
+                        <div class="coffee_product_txt">
+                          <p class="coffee_name">44도 블렌드</p>
+                          <span class="coffee_type">달콤&밸런스</span>
+                          <p class="coffee_price">9,000원</p>
+                        </div>
+                      </div>
+                      <!-- coffee_product -->
+                    </div>
+                    <div class="coffee_product_hot swiper-slide">
+                      <div class="coffee_product">
+                        <div class="coffee_product_img">
+                          <img src="./img/main/2022HOT_imgs/55do_02.png" alt="55do">
+                        </div>
+                        <div class="coffee_product_txt">
+                          <p class="coffee_name">과테말라 엘 소코로 레드버번</p>
+                          <span class="coffee_type">밸런스&달콤</span>
+                          <p class="coffee_price">9,000원</p>
+                        </div>
+                      </div>
+                      <!-- coffee_product -->
+                    </div>
+                    <div class="coffee_product_hot swiper-slide">
+                      <div class="coffee_product">
+                        <div class="coffee_product_img">
+                          <img src="./img/main/2022HOT_imgs/55do_03.png" alt="55do">
+                        </div>
+                        <div class="coffee_product_txt">
+                          <p class="coffee_name">66도 블렌드</p>
+                          <span class="coffee_type">밸런스&깔끔한</span>
+                          <p class="coffee_price">10,000원</p>
+                        </div>
+                      </div>
+                      <!-- coffee_product -->
+                    </div>
+
+                  </div>
+                </div>
+                <!-- hot_right_bottom -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- hot_outer -->
+
+  <section class="roastery_outer">
+    <div class="roastery_inner inner">
+      <div class="roastery_left">
+        <h3 class="eng">roastery</h3>
+        <p class="">더 다양한 로스터리<br>
+          원두를 즐겨보세요.
+        </p>
+      </div>
+      <div class="roastery_right swiper">
+        <div class="roastery_right_inner swiper-inner swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="coffee_logo02 rostery_item">
+              <div class="coffee_logo_box">
+                <img src="./img/main/logo_img_02.png" alt="하늘에커피 로고">
+              </div>
+              하늘에커피
+            </div>
+            <div class="coffee_logo02 rostery_item">
+              <div class="coffee_logo_box">
+                <img src="./img/main/logo_img_03.png" alt="영앤도터스 로고">
+              </div>
+              영앤도터스
+            </div>
+            <div class="coffee_logo02 rostery_item">
+              <div class="coffee_logo_box">
+                <img src="./img/main/2022HOT_imgs/ssc_logo.jpg" alt="수수커피">
+              </div>
+              <p class="coffee_name">수수커피</p>
+            </div>
+            <div class="coffee_logo02 rostery_item">
+              <div class="coffee_logo_box coffee_logo_box_m">
+                <img src="./img/main/logo_img_04.png" alt="커피몽타주로고">
+              </div>
+              <p class="coffee_name">커피몽타주</p>
+            </div>
+            <div class="coffee_logo02 rostery_item">
+              <div class="coffee_logo_box">
+                <img src="./img/main/2022HOT_imgs/werk_logo.png" alt="베르크">
+              </div>
+              <p class="coffee_name">베르크</p>
+            </div>
+            <div class="coffee_logo02 rostery_item">
+              <div class="coffee_logo_box">
+                <img src="./img/main/logo/1e311a03bda54536b1f68741ea9b3e17.png" alt="원더월커피">
+              </div>
+              <p class="coffee_name">원더월</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="coffee_logo02 rostery_item">
+              <div class="coffee_logo_box">
+                <img src="./img/main/2022HOT_imgs/alexthecoffee_logo.png" alt=" 알렉스 더 커피">
+              </div>
+              <p class="coffee_name">알렉스 더 커피</p>
+            </div>
+            <div class="coffee_logo02 rostery_item">
+              <div class="coffee_logo_box">
+                <img src="./img/main/2022HOT_imgs/connectscoffee_logo.png" alt="커넥츠">
+              </div>
+              <p class="coffee_name">커넥츠</p>
+            </div>
+            <div class="coffee_logo02 rostery_item">
+              <div class="coffee_logo_box">
+                <img src="./img/main/2022HOT_imgs/felt_logo.png" alt="펠트">
+              </div>
+              펠트
+            </div>
+            <div class="coffee_logo02 rostery_item">
+              <div class="coffee_logo_box">
+                <img src="./img/main/2022HOT_imgs/55do_logo.png" alt="55˚커피">
+              </div>
+              55˚커피
+            </div>
+            <div class="coffee_logo02 rostery_item">
+              <div class="coffee_logo_box">
+                <img src="./img/main/logo_img_01.jpg" alt="콩볶는사람들로고">
+              </div>
+              콩볶는사람들
+            </div>
+            <div class="coffee_logo02 rostery_item">
+              <div class="coffee_logo_box">
+                <img src="./img/main/logo/4e13897065f74741955c8142b2f92a92.png" alt="브니엘로고">
+              </div>
+              브니엘
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="coffee_logo02 rostery_item">
+              <div class="coffee_logo_box">
+                <img src="./img/main/logo/087e6d32c0664074904e17ea12385307.jpeg" alt="엘 카페">
+              </div>
+              <p class="coffee_name">엘 카페</p>
+            </div>
+            <div class="coffee_logo02 rostery_item">
+              <div class="coffee_logo_box">
+                <img src="./img/main/logo/42eba708c1944b21ad579422bb4eeab0.png" alt="언더프레셔">
+              </div>
+              <p class="coffee_name">언더프레셔</p>
+            </div>
+            <div class="coffee_logo02 rostery_item">
+              <div class="coffee_logo_box">
+                <img src="./img/main/logo/5f73c7bea81c49079383978e62c0a70e.png" alt="프레이져 커피">
+              </div>
+              <p class="coffee_name">프레이져 커피</p>
+            </div>
+            <div class="coffee_logo02 rostery_item">
+              <div class="coffee_logo_box">
+                <img src="./img/main/logo/45aae044f5fc4bd3853e16cb55f42afc (1).png" alt="선빌리지 커피">
+              </div>
+              <p class="coffee_name">선빌리지 커피</p>
+            </div>
+            <div class="coffee_logo02 rostery_item">
+              <div class="coffee_logo_box">
+                <img src="./img/main/logo/521e0da4981c4ac096856862c93f5a5b.png" alt="히떼 로스터리">
+              </div>
+              <p class="coffee_name">히떼 로스터리</p>
+            </div>
+            <div class="coffee_logo02 rostery_item">
+              <div class="coffee_logo_box">
+                <img src="./img/main/logo/5b73957452a648a0835c153956d02fcf.png" alt="리밀커피">
+              </div>
+              <p class="coffee_name">리밀커피</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="coffee_logo02 rostery_item">
+              <div class="coffee_logo_box">
+                <img src="./img/main/logo/738e58bc8ec04e6dbe6587ded711252f (1).jpeg" alt="슬러펀 커피">
+              </div>
+              <p class="coffee_name">슬러펀 커피</p>
+            </div>
+            <div class="coffee_logo02 rostery_item">
+              <div class="coffee_logo_box">
+                <img src="./img/main/logo/9dcd93c2634e4bbca5c93256a91387b3.png" alt="식물학">
+              </div>
+              <p class="coffee_name">식물학</p>
+            </div>
+            <div class="coffee_logo02 rostery_item">
+              <div class="coffee_logo_box">
+                <img src="./img/main/logo/b55dcfac420a49f48a1b90f445b36742.png" alt="UFO커피">
+              </div>
+              <p class="coffee_name">UFO 커피</p>
+            </div>
+            <div class="coffee_logo02 rostery_item">
+              <div class="coffee_logo_box">
+                <img src="./img/main/logo/beefbd95d7a8443d86586c0e4d8b66f6.png" alt="인더매스">
+              </div>
+              <p class="coffee_name">인더매스</p>
+            </div>
+            <div class="coffee_logo02 rostery_item">
+              <div class="coffee_logo_box">
+                <img src="./img/main/logo/ca86c5ea3ce441068a8fb94d505e9f74.png" alt="웨이브온">
+              </div>
+              <p class="coffee_name">웨이브온</p>
+            </div>
+            <div class="coffee_logo02 rostery_item">
+              <div class="coffee_logo_box">
+                <img src="./img/main/logo/ccb79ba3bc6740a5846c7f3102699379.png" alt="도화아파트먼트">
+              </div>
+              <p class="coffee_name">도화 아파트먼트</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="roastery_arrow">
+          <div class="arrow_left"><i class="xi-angle-left-thin"></i></div>
+          <div class="arrow_right"><i class="xi-angle-right-thin"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- roastery_outer -->
+
+  <section class="collector_banner_outer scroll_el">
+    <div class="collector_bg">
+      <div class="ci02 origin delay_03"><img src="./img/—Pngtree—brown coffee liquid splash 3d_5434040.png" alt="">
+      </div>
+      <div class="ci origin delay_03"><img src="./img/—Pngtree—brown coffee liquid splash 3d_5434040.png" alt=""></div>
+      <div class="collector_inner inner">
+        <div class="collector_txt">
+          <h3 class="collector_banner_title eng origin position_top delay_00 eng">
+            Good Coffee Collector
+          </h3>
+          <p class="origin position_top delay_01">코케는<br>
+            좋은 커피를 수집하는 Good Coffee Collector입니다.<br><br>
+            당신의 기록이 차곡차곡 쌓여<br>
+            취향이 되는 즐거움을 함께하며,<br>
+            커피로 당신의 일상에<br>
+            특별함이 더해지는 순간을 기대합니다.
+          </p>
+        </div>
+        <div class="collector_youtube origin delay_01">
+          <div id="bgndVideo" class="player"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- recommend_banner_outer -->
+
+  <section class="review_outer scroll_el">
+    <div class="review_inner inner">
+      <h2 class="eng">review</h2>
+      <p class="sub_title">코케 고객님들의 소중한 리뷰를 읽어보세요.</p>
+      <div class="origin position_top">
+        <div class="review_swiper swiper">
+          <div class="swiper-wrapper">
+            <div class="review_conts swiper-slide">
+              <div class="review_cont">
+                <div class="review_img_box">
+                  <img src="./img/main/review_02.jpg" alt="review">
+                  <div class="review_label">
+                    <p>Best<br>Review</p>
+                  </div>
+                </div>
+                <div class="review_img_txt">
+                  <p class="coffee_name">[콩볶는사람들] 스프링 블렌드</p>
+                  <div class="id_star">
+                    <p class="id">rmadm**님의 후기</p>
+                    <p class="star">&starf;&starf;&starf;&starf;&starf;</p>
+                  </div>
+                  <p class="review_txt">
+                    다양한 원두를 입맛대로 골라 먹을 수 있어 정말 좋아요.
+                  </p>
+                </div>
+              </div>
+              <div class="review_cont">
+                <div class="review_img_box">
+                  <img src="./img/main/review_05.jpg" alt="review">
+                  <div class="review_label">
+                    <p>Best<br>Review</p>
+                  </div>
+                </div>
+                <div class="review_img_txt">
+                  <p class="coffee_name">[영앤도터스] 룰라바이</p>
+                  <div class="id_star">
+                    <p class="id">rmadm**님의 후기</p>
+                    <p class="star">&starf;&starf;&starf;&starf;&starf;</p>
+                  </div>
+                  <p class="review_txt">
+                    다양한 원두를 입맛대로 골라 먹을 수 있어 정말 좋아요.
+                  </p>
+                </div>
+              </div>
+              <div class="review_cont">
+                <div class="review_img_box">
+                  <img src="./img/main/review_03.jpg" alt="review">
+                  <div class="review_label">
+                    <p>Best<br>Review</p>
+                  </div>
+                </div>
+                <div class="review_img_txt">
+                  <p class="coffee_name">[하늘에커피] 돌담 in 애월</p>
+                  <div class="id_star">
+                    <p class="id">rmadm**님의 후기</p>
+                    <p class="star">&starf;&starf;&starf;&starf;&starf;</p>
+                  </div>
+                  <p class="review_txt">
+                    다양한 원두를 입맛대로 골라 먹을 수 있어 정말 좋아요.
+                  </p>
+                </div>
+              </div>
+              <div class="review_cont">
+                <div class="review_img_box">
+                  <img src="./img/main/review_04.jpg" alt="review">
+                  <div class="review_label">
+                    <p>Best<br>Review</p>
+                  </div>
+                </div>
+                <div class="review_img_txt">
+                  <p class="coffee_name">[하늘에커피] 콜롬비아 디카페인</p>
+                  <div class="id_star">
+                    <p class="id">rmadm**님의 후기</p>
+                    <p class="star">&starf;&starf;&starf;&starf;&star;</p>
+                  </div>
+                  <p class="review_txt">
+                    다양한 원두를 입맛대로 골라 먹을 수 있어 정말 좋아요.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="review_conts swiper-slide">
+              <div class="review_cont">
+                <div class="review_img_box">
+                  <img src="./img/main/review_02.jpg" alt="review">
+                  <div class="review_label">
+                    <p>Best<br>Review</p>
+                  </div>
+                </div>
+                <div class="review_img_txt">
+                  <p class="coffee_name">[콩볶는사람들] 스프링 블렌드</p>
+                  <div class="id_star">
+                    <p class="id">rmadm**님의 후기</p>
+                    <p class="star">&starf;&starf;&starf;&starf;&starf;</p>
+                  </div>
+                  <p class="review_txt">
+                    다양한 원두를 입맛대로 골라 먹을 수 있어 정말 좋아요.
+                  </p>
+                </div>
+              </div>
+              <div class="review_cont">
+                <div class="review_img_box">
+                  <img src="./img/main/review_05.jpg" alt="review">
+                  <div class="review_label">
+                    <p>Best<br>Review</p>
+                  </div>
+                </div>
+                <div class="review_img_txt">
+                  <p class="coffee_name">[영앤도터스] 룰라바이</p>
+                  <div class="id_star">
+                    <p class="id">rmadm**님의 후기</p>
+                    <p class="star">&starf;&starf;&starf;&starf;&starf;</p>
+                  </div>
+                  <p class="review_txt">
+                    다양한 원두를 입맛대로 골라 먹을 수 있어 정말 좋아요.
+                  </p>
+                </div>
+              </div>
+              <div class="review_cont">
+                <div class="review_img_box">
+                  <img src="./img/main/review_03.jpg" alt="review">
+                  <div class="review_label">
+                    <p>Best<br>Review</p>
+                  </div>
+                </div>
+                <div class="review_img_txt">
+                  <p class="coffee_name">[하늘에커피] 돌담 in 애월</p>
+                  <div class="id_star">
+                    <p class="id">rmadm**님의 후기</p>
+                    <p class="star">&starf;&starf;&starf;&starf;&starf;</p>
+                  </div>
+                  <p class="review_txt">
+                    다양한 원두를 입맛대로 골라 먹을 수 있어 정말 좋아요.
+                  </p>
+                </div>
+              </div>
+              <div class="review_cont">
+                <div class="review_img_box">
+                  <img src="./img/main/review_04.jpg" alt="review">
+                  <div class="review_label">
+                    <p>Best<br>Review</p>
+                  </div>
+                </div>
+                <div class="review_img_txt">
+                  <p class="coffee_name">[하늘에커피] 콜롬비아 디카페인</p>
+                  <div class="id_star">
+                    <p class="id">rmadm**님의 후기</p>
+                    <p class="star">&starf;&starf;&starf;&starf;&star;</p>
+                  </div>
+                  <p class="review_txt">
+                    다양한 원두를 입맛대로 골라 먹을 수 있어 정말 좋아요.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="review_pagi">
+          <div class="swiper-pagination"></div>
+          <div class="review_arrow">
+            <div class="arrow_left"><i class="xi-angle-left"></i></div>
+            <div class="arrow_right"><i class="xi-angle-right"></i></div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- best_product_outer -->
+
+  <footer id="footer" class="footer_outer">
+    <div class="footer_top">
+      <div class="footer_top_inner inner">
+        <div class="cs_center">
+          <h4>cs center</h4>
+          <p class="num">070-4647-1868</p>
+          <p class="cs_txt">
+            오전 10:00 ~ 오후 7:00<br>
+            점심시간 : 오후 12:00 ~ 2:00<br>
+            토 / 일 / 공휴일 휴무
+          </p>
+        </div>
+        <div class="store_guide">
+          <h4>store guide</h4>
+          <ul>
+            <li>
+              <i class="xi-call"></i>
+              <p>HELP</p>
+              <a class="sg_txt_box" href="#">고객센터
+              </a>
+            </li>
+            <li>
+              <i class="xi-box"></i>
+              <p>ORDER</p>
+              <a class="sg_txt_box" href="#">배송조희
+              </a>
+            </li>
+            <li>
+              <i class="xi-forum-o"></i>
+              <p>Q & A</p>
+              <a class="sg_txt_box" href="#">상품문의
+              </a>
+            </li>
+            <li>
+              <i class="xi-comment-o"></i>
+              <p>REVIEW</p>
+              <a class="sg_txt_box" href="#">상품후기
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="return_exchange">
+          <h4>return &middot; exchange</h4>
+          <ul class="re_tab">
+            <li><a class="tab_on" href="#">배송&middot;택배</a></li>
+            <li><a href="#">교환&middot반품</a></li>
+          </ul>
+          <div class="re_tab_conts">
+            <div id="" class="re_tab_cont  tab_cont_on">
+              로젠택배 1588-9988<br>
+              월~금 08:00 / 토 9:00~13:00<br>
+              <a href="#">택배사 바로가기</a>
+            </div>
+            <div class="re_tab_cont">
+              교환/반품문의 1588-9988<br>
+              월~금 08:00 / 토 9:00~13:00<br>
+              <a href="#">문의 하러가기</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer_center">
+      <div class="footer_center_inner inner">
+        <div class="footer_center_left">
+          <ul>
+            <li><a href="#">home </a></li>
+            &middot;
+            <li><a href="#">about us</a></li>
+            &middot;
+            <li><a href="#">agreement</a></li>
+            &middot;
+            <li><a href="#">privacypolicy</a></li>
+            &middot;
+            <li><a href="#">storeguide</a></li>
+            &middot;
+            <li><a href="#">cscenter</a></li>
+          </ul>
+        </div>
+        <div class="footer_center_right">
+          <i class="xi-kakaotalk"></i>
+          <i class="xi-instagram"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer_bottom">
+      <div class="footer_bottom_inner inner">
+        <div class="footer_bottom_left">
+          <p>
+            <span style="color: #000;font-weight: 500;">상호명 : (주)컨슈머브릿지</span> &VerticalSeparator; 대표: 신재현, 박성환
+            &VerticalSeparator;
+            개인정보보호책임자: 신재현
+            &VerticalSeparator; 사업자등록번호:
+            713-86-01467 &VerticalSeparator;
+            통신판매업신고번호:제2021-서울강남-02469호 &VerticalSeparator;
+            <br>
+            사업장소재지: 서울 강남구 테헤란로2길 27 패스트파이브 빌딩 9층 915호<br>
+            주식회사 컨슈머브릿지는 전자상거래 등에서의 소비자보호에 관한 법률에 따른 통신판매중개자로서 중개하는 통신판매에 관하여서는 통신판매의 당사자가 아니며
+            <br>
+            상품의 주문, 배송 및 환불 등과 관련한 의무와 책임은 각 판매자에게 있습니다.
+          </p>
+        </div>
+        <div class="footer_bottom_right">
+          <a href="./main.html"><img src="./img/logo.png" alt="코케 푸터 로고"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer_copy">
+      <div class="footer_copy_inner inner">
+        &copy;2021 Consumer Bridge, Inc. All rights reserved
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
