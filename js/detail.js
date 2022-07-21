@@ -12,16 +12,17 @@ tabThumnails.forEach((tabThumnail)=>{
     })
 })
 
-//디테일 탭메뉴 스크롤 이동
-    const detailTabmenus = document.querySelectorAll('.detail_tab >li>a')
+// 디테일 탭메뉴 스크롤 이동
+const detailTabmenus = document.querySelectorAll('.detail_tab >li>a')
 
-    detailTabmenus.forEach((detailTabmenu)=>{
-        detailTabmenu.addEventListener('click',function(e){
-            e.preventDefault();
-            const scrollPosition = document.querySelector(this.dataset.target).offsetTop;
-            window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
-            })
+detailTabmenus.forEach((detailTabmenu)=>{
+    detailTabmenu.addEventListener('click',function(e){
+        e.preventDefault();
+        const scrollPosition = document.querySelector(this.dataset.target).offsetTop;
+        window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
         })
+    })
+
         
 //커피원두옵션 버튼 on 
     const coffeeOptions = document.querySelectorAll('.option_coffee > a')
@@ -60,6 +61,9 @@ tabThumnails.forEach((tabThumnail)=>{
     }
 
 
+    
+
+   
 
     
 

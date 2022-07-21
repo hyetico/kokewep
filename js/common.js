@@ -79,7 +79,7 @@
 // var selectText = langSelect.options[langSelect.selectedIndex].text;  
   
 
-console.log(priceOption)
+// console.log(priceOption)
 
 
 
