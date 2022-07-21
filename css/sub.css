@@ -15,36 +15,24 @@ h3.sub_title {
 }
 
 .aside_menu {
-  /* position: sticky;
-  top: 0; */
-  /* top: 50px; */
-  width: 20%;
+  width: 22%;
   background-color: #FFF9F6;
   padding: 30px 30px;
   box-sizing: border-box;
 }
 
-.fixed {
-  width: 300px;
-  position: fixed;
-  top: 0px;
-  height: 100%;
+.aside_nav {
+  /* position: sticky;
+  top: 200px; */
 }
 
-.bottom {
-  z-index: -1;
-  position: absolute;
-  bottom: 0px;
-  top: auto;
-}
-
-
-.aside_menu>h4 {
+.aside_nav>h4 {
   font-size: 20px;
   line-height: 60px;
+  margin-bottom: 15px;
 }
 
-.aside_nav a.de{
+.aside_nav a.de {
   position: relative;
   display: block;
   line-height: 60px;
@@ -100,7 +88,9 @@ h3.sub_title {
 
 .sub_box {
   display: none;
+  transition: height 0.3s;
 }
+
 .aside_nav>li .sub_box ul {
   display: flex;
   flex-wrap: wrap;
@@ -109,22 +99,21 @@ h3.sub_title {
   box-sizing: border-box;
 }
 
-.aside_nav>li .sub_box ul >li {
+.aside_nav>li .sub_box ul>li {
   width: 30%;
   display: flex;
   justify-content: space-around;
   flex-wrap: nowrap;
   margin-bottom: 3px;
-
 }
 
-.aside_nav>li .sub_box ul >li {
+.aside_nav>li .sub_box ul>li {
   overflow: hidden;
   margin: 2px 2px;
 }
 
 
-.aside_nav>li> .sub_box ul>li>a {
+.aside_nav>li>.sub_box ul>li>a {
   display: block;
   width: 100%;
   height: 30px;
@@ -136,7 +125,7 @@ h3.sub_title {
   transition: all 0.3s;
 }
 
-.aside_nav>li> .sub_box ul>li>a:hover {
+.aside_nav>li>.sub_box ul>li>a:hover {
   color: #ff6c57;
   border: 1px solid #ff6c57;
 }
@@ -229,7 +218,6 @@ h3.sub_title {
   display: flex;
 }
 
-
 .tab_conts>div {
   display: none;
 }
@@ -245,7 +233,7 @@ h3.sub_title {
 .filter_tab {
   position: relative;
   position: absolute;
-  top:50px;
+  top: 50px;
   height: 800px;
   margin-left: 10%;
   display: none;
@@ -257,12 +245,32 @@ h3.sub_title {
   flex-wrap: wrap;
 }
 
+.coffee_product_cont>a {
+  /* display: block; */
+  width: 33.3333%;
+}
+
+
 .coffee_product_cont>div {
   width: 33.3333%;
 }
 
+.show {
+  transition: 0.3s ease;
+  /* opacity: 1; */
+  display: block;
+}
+
+.hide {
+  transition: 0.2s ease;
+  display: none;
+  /* opacity: 0; */
+}
+
+
 .coffee_product {
   position: relative;
+  margin-bottom: 20px;
 }
 
 .coffee_product_img {
@@ -339,24 +347,21 @@ h3.sub_title {
 }
 
 
-
-
 /* .btn_conts */
 .btn_conts {
-  position: absolute;
-  bottom: 0;
-  left: 5%;
   position: relative;
+  padding-bottom: 60px;
+  box-sizing: border-box;
 }
 
-.btn_page_navi {
+.btn_page_navi_box {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 56%;
   transform: translate(-50%, -50%);
 }
 
-.btn_page_navi {
+.btn_page_navi_box .btn_page_navi {
   display: block;
   background-color: #999;
   color: #fff;

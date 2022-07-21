@@ -46,7 +46,7 @@ section {
   margin: 0 auto;
 }
 
-section>h2 {
+section h2 {
   font-size: 37px;
   text-align: center;
   margin-bottom: 30px;
@@ -55,7 +55,6 @@ section>h2 {
 h3 {
   font-size: 33px;
   text-align: center;
-  /* margin-bottom: 30px; */
 }
 
 .eng {
@@ -1197,9 +1196,6 @@ h2.eng {
 }
 
 
-/*푸터*/
-
-
 .footer_outer {
   overflow: hidden;
 }
@@ -1233,7 +1229,6 @@ h2.eng {
   align-items: center;
 }
 
-.footer_top_inner>div:nth-child(2) {}
 
 .footer_top_inner>div:nth-child(2) {
   border-left: 1px solid #ebebeb;
@@ -1301,8 +1296,6 @@ h2.eng {
   display: block;
   padding: 2px 2px;
   font-size: 10px;
-  /* border: 1px solid #ccc;
-  box-sizing: border-box; */
   border-radius: 5px;
   color: #fff;
   background-color: #222;
@@ -1348,14 +1341,6 @@ h2.eng {
   /* border-right: 1px solid #f0f0f0; */
 }
 
-/* .re_tab li.tab_on {
-  color: #222;
-  background-color: #ffff;
-  border-top: 1px solid #E0E0E0;
-  box-sizing: border-box;
-  border-left: 1px solid #E0E0E0;
-  border-right: 1px solid #f0f0f0;
-} */
 
 .re_tab_conts {
   position: relative;
@@ -1417,20 +1402,6 @@ h2.eng {
   background-color: #ff6c57;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

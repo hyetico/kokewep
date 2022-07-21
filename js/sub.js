@@ -1,67 +1,32 @@
 
+let filterBtns = document.querySelectorAll('[data-value]')
+let alls = document.querySelectorAll('.coffee_product_cont a');
 
-// $(window).scroll(function () {
-// 	var headerHeight = $('.site-header').innerHeight();
-// 	var contentHeight = $('.site-main').innerHeight();
-// 	var sidebarHeight = $('.side-navigation').height();
-//   var sidebarBottomPos = contentHeight - sidebarHeight; 
-//   var trigger = $(window).scrollTop() - headerHeight;
+filterBtns.forEach(filterBtn =>{
+  filterBtn.addEventListener('click',function(e){
+    e.preventDefault();
 
-//       	if ($(window).scrollTop() >= headerHeight) {
-//           	$('.side-navigation').addClass('fixed');
-//       	} else {
-//           	$('.side-navigation').removeClass('fixed');
-//       	}
+    let val = e.target.dataset.value;
 
-//       	if (trigger >= sidebarBottomPos) {
-//           	$('.side-navigation').addClass('bottom');
-//       	} else {
-//           	$('.side-navigation').removeClass('bottom');
-//       	}
-// });
+    alls.forEach(all => {
+      let arr = all.dataset.group.split(' ');
+      for(let a of arr){
+        if(a==val){
+          all.setAttribute('class','show')
+         break;
 
-
-// const fixedMenu = document.querySelector('.aside_menu')
-// const fixedPoint = document.querySelector('.content')
-// const fixedPointHeight = fixedPoint.offsetHeight
-// const fixedPointTop = fixedPoint.offsetTop
-// const rightCont = document.querySelector('.right_conts')
-// const rightContHeight = rightCont.height
-// const rightContTop = rightCont.offsetTop
-// // const footer = document.querySelector('.header_outer')
-// // const footer = document.querySelector('.header_outer')
-
-// let sidebarBottomPos = rightContHeight - fixedPointHeight; 
-// const footer = document.querySelector('footer')
-// const footerHeight = footer.offsetHeight
-// const footerTop = footer.offsetTop
-
-
-// // let MenuHeight = ''
-
-// window.addEventListener('scroll',function(){
-//   let scrollTop = window.scrollY || document.documentElement.scrollTop;
-//   // let trigger = scrollTop - 100;
-
-//   // fixedPointTop
-//   if(scrollTop >= fixedPoint.offsetTop) {
-//     fixedMenu.classList.add('fixed')
-//     rightCont.style.marginLeft='330px'
-  
-//   }else{
-//     fixedMenu.classList.remove('fixed')
-//     rightCont.style.marginLeft='0'
-//   }
-
-// })
-
-
-
+        }else {
+          all.setAttribute('class','hide')
+        }
+      }
+    })
+  })
+})
 
 
 
 //커피찾기 메뉴
-const subBtns = document.querySelectorAll('.aside_nav> li')
+const subBtns = document.querySelectorAll('.aside_nav> li >a')
 const toggleIcon = document.querySelectorAll('.aside_nav li>a>i')
 const subMenus = document.querySelectorAll('.aside_nav > li >.sub_box')
 
